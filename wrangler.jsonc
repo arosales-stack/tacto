@@ -1,0 +1,13 @@
+{
+  "name": "tacto",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // every request goes through the Worker first, so nothing is served without login
+    "run_worker_first": true
+  }
+  // Secrets — set in Cloudflare (Worker > Settings > Variables and Secrets), never here:
+  //   TOOLS_PASSWORD, OPENAI_API_KEY
+}

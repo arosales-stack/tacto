@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Tacto — Images</title>
+  <link rel="icon" href="/logo.png">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <header class="top">
+    <img class="top__logo" src="/logo.png" alt="Tacto" width="640" height="200">
+    <a class="top__logout" href="/logout">Log out</a>
+  </header>
+
+  <main class="wrap">
+    <label class="drop" data-drop>
+      <input type="file" accept="image/png,image/jpeg,image/webp" multiple hidden data-files>
+      <span class="drop__title">Drop images here</span>
+      <span class="drop__hint">or click to choose · JPG, PNG, WebP</span>
+    </label>
+
+    <div class="prompt">
+      <textarea rows="4" placeholder="What should change in every image?" aria-label="Prompt" data-prompt></textarea>
+      <div class="prompt__bar">
+        <span class="status" data-status></span>
+        <button class="btn btn--ghost" type="button" data-download-all hidden>Download all</button>
+        <button class="btn" type="button" data-run disabled>Optimize</button>
+      </div>
+    </div>
+
+    <section class="grid" data-grid></section>
+  </main>
+
+  <template data-card-template>
+    <article class="card">
+      <div class="card__pair">
+        <img class="card__img" data-before alt="Original">
+        <div class="card__out">
+          <img class="card__img" data-after alt="Optimized" hidden>
+          <span class="card__state" data-state>Ready</span>
+        </div>
+      </div>
+      <div class="card__foot">
+        <span class="card__name" data-name></span>
+        <button class="link" type="button" data-retry hidden>Retry</button>
+        <a class="link" data-download hidden>Download</a>
+        <button class="link link--muted" type="button" data-remove aria-label="Remove">×</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>
