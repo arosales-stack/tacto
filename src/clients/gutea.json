@@ -6,7 +6,6 @@
   "branch": "main",
   "content_path": "content/site.json",
   "password_secret": "GUTEA_CMS_PASSWORD",
-
   "brand": {
     "logo": "/clients/gutea/logo.png",
     "favicon": "/clients/gutea/favicon.png",
@@ -20,95 +19,374 @@
     "highlight": "oklch(0.58 0.14 35)",
     "tagline": "Sirote. Peins. Souris."
   },
-
-  "credits": { "per_year": 100, "period_start": "2026-10-28" },
-
+  "credits": {
+    "per_year": 100,
+    "period_start": "2026-10-28"
+  },
   "groups": [
     {
       "title": "Infos pratiques",
       "fields": [
-        { "path": "business.hours_short", "label": "Horaires (format court, en haut de l'accueil)", "type": "text", "min": 5, "max": 24, "hint": "Ex. : Lun–Sam · 11h–20h" },
-        { "path": "business.hours_long.0", "label": "Horaires — ligne 1 (pied de page)", "type": "text", "min": 3, "max": 26 },
-        { "path": "business.hours_long.1", "label": "Horaires — ligne 2 (pied de page)", "type": "text", "min": 3, "max": 30 },
-        { "path": "business.address.0", "label": "Adresse — rue", "type": "text", "min": 5, "max": 32 },
-        { "path": "business.address.1", "label": "Adresse — code postal et ville", "type": "text", "min": 5, "max": 24 },
-        { "path": "business.email", "label": "E-mail de contact", "type": "email", "min": 6, "max": 40 },
-        { "path": "business.booking_url", "label": "Lien de réservation", "type": "url", "min": 10, "max": 200 }
+        {
+          "path": "business.hours_short",
+          "label": "Horaires (format court, en haut de l'accueil)",
+          "type": "text",
+          "min": 5,
+          "max": 24,
+          "hint": "Ex. : Lun–Sam · 11h–20h"
+        },
+        {
+          "path": "business.hours_long.0",
+          "label": "Horaires — ligne 1 (pied de page)",
+          "type": "text",
+          "min": 3,
+          "max": 26
+        },
+        {
+          "path": "business.hours_long.1",
+          "label": "Horaires — ligne 2 (pied de page)",
+          "type": "text",
+          "min": 3,
+          "max": 30
+        },
+        {
+          "path": "business.address.0",
+          "label": "Adresse — rue",
+          "type": "text",
+          "min": 5,
+          "max": 32
+        },
+        {
+          "path": "business.address.1",
+          "label": "Adresse — code postal et ville",
+          "type": "text",
+          "min": 5,
+          "max": 24
+        },
+        {
+          "path": "business.email",
+          "label": "E-mail de contact",
+          "type": "email",
+          "min": 6,
+          "max": 40
+        },
+        {
+          "path": "business.booking_url",
+          "label": "Lien de réservation",
+          "type": "url",
+          "min": 10,
+          "max": 200
+        }
       ]
     },
     {
       "title": "Bubble tea — prix",
       "fields": [
-        { "path": "bubble_tea.sizes.0.price", "label": "Merveilleux 500 mL", "type": "number", "min": 1, "max": 20, "unit": "€" },
-        { "path": "bubble_tea.sizes.1.price", "label": "Luxueux 700 mL", "type": "number", "min": 1, "max": 20, "unit": "€" },
-        { "path": "bubble_tea.topping_price", "label": "Supplément topping", "type": "number", "min": 0, "max": 5, "unit": "€" }
+        {
+          "path": "bubble_tea.sizes.0.price",
+          "label": "Bubble tea 500 mL",
+          "type": "number",
+          "min": 1,
+          "max": 20,
+          "unit": "€"
+        },
+        {
+          "path": "bubble_tea.sizes.1.price",
+          "label": "Bubble tea 700 mL",
+          "type": "number",
+          "min": 1,
+          "max": 20,
+          "unit": "€"
+        }
       ]
     },
     {
       "title": "Bubble tea — descriptions",
       "fields": [
-        { "path": "bubble_tea.kinds.0.text", "label": "Au lait", "type": "paragraph", "min": 30, "max": 150 },
-        { "path": "bubble_tea.kinds.1.text", "label": "Fruité", "type": "paragraph", "min": 30, "max": 150 },
-        { "path": "bubble_tea.kinds.2.text", "label": "Virgin", "type": "paragraph", "min": 30, "max": 150 }
+        {
+          "path": "bubble_tea.kinds.0.text",
+          "label": "Au lait",
+          "type": "paragraph",
+          "min": 30,
+          "max": 150
+        },
+        {
+          "path": "bubble_tea.kinds.1.text",
+          "label": "Fruité",
+          "type": "paragraph",
+          "min": 30,
+          "max": 150
+        },
+        {
+          "path": "bubble_tea.kinds.2.text",
+          "label": "Virgin",
+          "type": "paragraph",
+          "min": 30,
+          "max": 150
+        }
       ]
     },
     {
       "title": "Cafés",
       "fields": [
-        { "path": "cafes.0.name", "label": "Café 1", "type": "text", "min": 3, "max": 40 },
-        { "path": "cafes.0.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "cafes.1.name", "label": "Café 2", "type": "text", "min": 3, "max": 40 },
-        { "path": "cafes.1.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "cafes.2.name", "label": "Café 3", "type": "text", "min": 3, "max": 40 },
-        { "path": "cafes.2.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "cafes.3.name", "label": "Café 4", "type": "text", "min": 3, "max": 40 },
-        { "path": "cafes.3.price", "label": "Prix", "type": "price", "min": 2, "max": 12 }
+        {
+          "path": "cafes.0.name",
+          "label": "Café 1",
+          "type": "text",
+          "min": 3,
+          "max": 40
+        },
+        {
+          "path": "cafes.0.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "cafes.1.name",
+          "label": "Café 2",
+          "type": "text",
+          "min": 3,
+          "max": 40
+        },
+        {
+          "path": "cafes.1.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "cafes.2.name",
+          "label": "Café 3",
+          "type": "text",
+          "min": 3,
+          "max": 40
+        },
+        {
+          "path": "cafes.2.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "cafes.3.name",
+          "label": "Café 4",
+          "type": "text",
+          "min": 3,
+          "max": 40
+        },
+        {
+          "path": "cafes.3.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        }
       ]
     },
     {
       "title": "Desserts",
       "fields": [
-        { "path": "desserts.0.name", "label": "Dessert 1", "type": "text", "min": 3, "max": 40 },
-        { "path": "desserts.0.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "desserts.1.name", "label": "Dessert 2", "type": "text", "min": 3, "max": 40 },
-        { "path": "desserts.1.price", "label": "Prix", "type": "price", "min": 2, "max": 12 }
+        {
+          "path": "desserts.0.name",
+          "label": "Dessert 1",
+          "type": "text",
+          "min": 3,
+          "max": 40
+        },
+        {
+          "path": "desserts.0.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "desserts.1.name",
+          "label": "Dessert 2",
+          "type": "text",
+          "min": 3,
+          "max": 40
+        },
+        {
+          "path": "desserts.1.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        }
       ]
     },
     {
       "title": "Atelier — supports et prix",
       "fields": [
-        { "path": "supports.0.name", "label": "Support 1", "type": "text", "min": 3, "max": 26 },
-        { "path": "supports.0.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "supports.1.name", "label": "Support 2", "type": "text", "min": 3, "max": 26 },
-        { "path": "supports.1.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "supports.2.name", "label": "Support 3", "type": "text", "min": 3, "max": 26 },
-        { "path": "supports.2.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "supports.3.name", "label": "Support 4", "type": "text", "min": 3, "max": 26 },
-        { "path": "supports.3.price", "label": "Prix", "type": "price", "min": 2, "max": 12 },
-        { "path": "supports.4.name", "label": "Support 5", "type": "text", "min": 3, "max": 26 },
-        { "path": "supports.4.price", "label": "Prix", "type": "price", "min": 2, "max": 12 }
+        {
+          "path": "supports.0.name",
+          "label": "Support 1",
+          "type": "text",
+          "min": 3,
+          "max": 26
+        },
+        {
+          "path": "supports.0.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "supports.1.name",
+          "label": "Support 2",
+          "type": "text",
+          "min": 3,
+          "max": 26
+        },
+        {
+          "path": "supports.1.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "supports.2.name",
+          "label": "Support 3",
+          "type": "text",
+          "min": 3,
+          "max": 26
+        },
+        {
+          "path": "supports.2.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "supports.3.name",
+          "label": "Support 4",
+          "type": "text",
+          "min": 3,
+          "max": 26
+        },
+        {
+          "path": "supports.3.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        },
+        {
+          "path": "supports.4.name",
+          "label": "Support 5",
+          "type": "text",
+          "min": 3,
+          "max": 26
+        },
+        {
+          "path": "supports.4.price",
+          "label": "Prix",
+          "type": "price",
+          "min": 2,
+          "max": 12
+        }
       ]
     },
     {
       "title": "Réserver ou pas ?",
       "fields": [
-        { "path": "booking_rules.0.title", "label": "Semaine — titre", "type": "text", "min": 3, "max": 24 },
-        { "path": "booking_rules.0.text", "label": "Semaine — texte", "type": "paragraph", "min": 10, "max": 110 },
-        { "path": "booking_rules.1.title", "label": "Week-end — titre", "type": "text", "min": 3, "max": 24 },
-        { "path": "booking_rules.1.text", "label": "Week-end — texte", "type": "paragraph", "min": 10, "max": 110 },
-        { "path": "booking_rules.2.title", "label": "À emporter — titre", "type": "text", "min": 3, "max": 24 },
-        { "path": "booking_rules.2.text", "label": "À emporter — texte", "type": "paragraph", "min": 10, "max": 110 }
+        {
+          "path": "booking_rules.0.title",
+          "label": "Semaine — titre",
+          "type": "text",
+          "min": 3,
+          "max": 24
+        },
+        {
+          "path": "booking_rules.0.text",
+          "label": "Semaine — texte",
+          "type": "paragraph",
+          "min": 10,
+          "max": 110
+        },
+        {
+          "path": "booking_rules.1.title",
+          "label": "Week-end — titre",
+          "type": "text",
+          "min": 3,
+          "max": 24
+        },
+        {
+          "path": "booking_rules.1.text",
+          "label": "Week-end — texte",
+          "type": "paragraph",
+          "min": 10,
+          "max": 110
+        },
+        {
+          "path": "booking_rules.2.title",
+          "label": "À emporter — titre",
+          "type": "text",
+          "min": 3,
+          "max": 24
+        },
+        {
+          "path": "booking_rules.2.text",
+          "label": "À emporter — texte",
+          "type": "paragraph",
+          "min": 10,
+          "max": 110
+        }
       ]
     },
     {
       "title": "Avis clients",
       "fields": [
-        { "path": "reviews.0.text", "label": "Avis 1", "type": "paragraph", "min": 40, "max": 230 },
-        { "path": "reviews.0.author", "label": "Auteur", "type": "text", "min": 2, "max": 24 },
-        { "path": "reviews.1.text", "label": "Avis 2", "type": "paragraph", "min": 40, "max": 230 },
-        { "path": "reviews.1.author", "label": "Auteur", "type": "text", "min": 2, "max": 24 },
-        { "path": "reviews.2.text", "label": "Avis 3", "type": "paragraph", "min": 40, "max": 230 },
-        { "path": "reviews.2.author", "label": "Auteur", "type": "text", "min": 2, "max": 24 }
+        {
+          "path": "reviews.0.text",
+          "label": "Avis 1",
+          "type": "paragraph",
+          "min": 40,
+          "max": 230
+        },
+        {
+          "path": "reviews.0.author",
+          "label": "Auteur",
+          "type": "text",
+          "min": 2,
+          "max": 24
+        },
+        {
+          "path": "reviews.1.text",
+          "label": "Avis 2",
+          "type": "paragraph",
+          "min": 40,
+          "max": 230
+        },
+        {
+          "path": "reviews.1.author",
+          "label": "Auteur",
+          "type": "text",
+          "min": 2,
+          "max": 24
+        },
+        {
+          "path": "reviews.2.text",
+          "label": "Avis 3",
+          "type": "paragraph",
+          "min": 40,
+          "max": 230
+        },
+        {
+          "path": "reviews.2.author",
+          "label": "Auteur",
+          "type": "text",
+          "min": 2,
+          "max": 24
+        }
       ]
     }
   ]
