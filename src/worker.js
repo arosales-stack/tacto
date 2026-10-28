@@ -1,30 +1,38 @@
-// Tacto tools — private Worker.
-// Everything is behind one password. Secrets (set in Cloudflare, never in code):
-//   TOOLS_PASSWORD  — the login password
-//   OPENAI_API_KEY  — used server-side only, never sent to the browser
+// Tacto — private Worker.
+//   /            image optimizer (Tacto team), password TOOLS_PASSWORD
+//   /<client>    that client's CMS (e.g. /gutea), password from the client's config
+//
+// Secrets (set in Cloudflare, never in code):
+//   TOOLS_PASSWORD, OPENAI_API_KEY, GITHUB_TOKEN, and one CMS password per client (e.g. GUTEA_CMS_PASSWORD)
+
+import { checkPassword, sessionCookie, clearCookie, hasSession, redirect, json } from './auth.js';
+import { clients } from './clients/index.js';
+import { handleCms } from './cms.js';
 
 const COOKIE = 'tacto_session';
-const SESSION_DAYS = 30;
 const OPENAI_EDITS = 'https://api.openai.com/v1/images/edits';
+
+// Files anyone can load: login page styles, logos, and the CMS front-end (no data in them)
+const PUBLIC_PATHS = [/^\/app\.css$/, /^\/logo\.png$/, /^\/cms\//, /^\/clients\/[\w-]+\//];
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
+    if (PUBLIC_PATHS.some((re) => re.test(url.pathname))) return env.ASSETS.fetch(request);
+
+    // Client CMS: /gutea, /gutea/login, /gutea/api/...
+    const clientId = url.pathname.split('/')[1];
+    if (clients[clientId]) return handleCms(request, env, clients[clientId], url);
+
+    // Tacto tools
     if (url.pathname === '/login') {
       return request.method === 'POST' ? login(request, env) : loginPage();
     }
-    if (url.pathname === '/logout') {
-      return redirect('/login', `${COOKIE}=; Path=/; Max-Age=0; HttpOnly; Secure; SameSite=Strict`);
-    }
+    if (url.pathname === '/logout') return redirect('/login', clearCookie(COOKIE));
 
-    // the login page needs its stylesheet and logo before login
-    if (url.pathname === '/app.css' || url.pathname === '/logo.png') return env.ASSETS.fetch(request);
-
-    if (!(await isLoggedIn(request, env))) {
-      return url.pathname.startsWith('/api/')
-        ? json({ error: 'Not logged in' }, 401)
-        : redirect('/login');
+    if (!(await hasSession(request, COOKIE, env.TOOLS_PASSWORD))) {
+      return url.pathname.startsWith('/api/') ? json({ error: 'Not logged in' }, 401) : redirect('/login');
     }
 
     if (url.pathname === '/api/images/edit' && request.method === 'POST') {
@@ -57,51 +65,11 @@ async function proxyImageEdit(request, env) {
   });
 }
 
-// ---------- Auth ----------
+// ---------- Tacto login ----------
 async function login(request, env) {
   const form = await request.formData();
-  const password = String(form.get('password') ?? '');
-  if (!env.TOOLS_PASSWORD || !(await safeEqual(password, env.TOOLS_PASSWORD))) {
-    return loginPage('Wrong password');
-  }
-  const expires = Date.now() + SESSION_DAYS * 864e5;
-  const token = `${expires}.${await sign(String(expires), env.TOOLS_PASSWORD)}`;
-  return redirect('/', `${COOKIE}=${token}; Path=/; Max-Age=${SESSION_DAYS * 86400}; HttpOnly; Secure; SameSite=Strict`);
-}
-
-async function isLoggedIn(request, env) {
-  if (!env.TOOLS_PASSWORD) return false;
-  const cookie = request.headers.get('Cookie') ?? '';
-  const token = cookie.split(/;\s*/).find((c) => c.startsWith(`${COOKIE}=`))?.slice(COOKIE.length + 1);
-  if (!token) return false;
-  const [expires, sig] = token.split('.');
-  if (!expires || !sig || Number(expires) < Date.now()) return false;
-  return safeEqual(sig, await sign(expires, env.TOOLS_PASSWORD));
-}
-
-async function sign(value, secret) {
-  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), { name: 'HMAC', hash: 'SHA-256' }, false, ['sign']);
-  const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(value));
-  return btoa(String.fromCharCode(...new Uint8Array(mac))).replace(/[+/=]/g, (c) => ({ '+': '-', '/': '_', '=': '' })[c]);
-}
-
-async function safeEqual(a, b) {
-  const [ha, hb] = await Promise.all([a, b].map((s) => crypto.subtle.digest('SHA-256', new TextEncoder().encode(s))));
-  const x = new Uint8Array(ha), y = new Uint8Array(hb);
-  let diff = 0;
-  for (let i = 0; i < x.length; i++) diff |= x[i] ^ y[i];
-  return diff === 0;
-}
-
-// ---------- Helpers ----------
-function redirect(location, cookie) {
-  const headers = { Location: location };
-  if (cookie) headers['Set-Cookie'] = cookie;
-  return new Response(null, { status: 303, headers });
-}
-
-function json(data, status = 200) {
-  return new Response(JSON.stringify(data), { status, headers: { 'Content-Type': 'application/json' } });
+  if (!(await checkPassword(form.get('password'), env.TOOLS_PASSWORD))) return loginPage('Wrong password');
+  return redirect('/', await sessionCookie(COOKIE, env.TOOLS_PASSWORD));
 }
 
 function loginPage(error = '') {
