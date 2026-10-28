@@ -9,6 +9,7 @@
 
   "brand": {
     "logo": "/clients/gutea/logo.png",
+    "favicon": "/clients/gutea/favicon.png",
     "font_url": "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Caveat+Brush&display=swap",
     "font": "'Bricolage Grotesque', system-ui, sans-serif",
     "hand_font": "'Caveat Brush', cursive",
