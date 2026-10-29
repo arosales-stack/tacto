@@ -166,6 +166,8 @@ $('[data-save]').addEventListener('click', async () => {
 window.addEventListener('beforeunload', (e) => { if ($$('.field.is-changed').length) e.preventDefault(); });
 
 // ---------- Requests & credits ----------
+// Unpriced estimates (credits: null): 'out' = separate quote, anything else = estimated by hand
+const creditsText = (e) => (e.credits == null ? (e.id === 'out' ? 'Devis séparé' : 'À estimer') : `${e.credits} crédits`);
 const STATUS = { pending: 'En attente', approved: 'Validée', done: 'Réalisée', refused: 'Refusée' };
 let creditsState = null;
 
@@ -180,7 +182,7 @@ function renderCredits(s) {
     <p class="credits__note">${s.used} utilisés · renouvelés le ${renew}</p>`;
   $('[data-examples]').innerHTML = `
     <h2 class="examples__title">Repères</h2>
-    <ul>${s.examples.map((e) => `<li><span>${esc(e.label)}</span><strong>${e.credits} crédits</strong></li>`).join('')}</ul>
+    <ul>${s.examples.map((e) => `<li><span>${esc(e.label)}</span><strong>${creditsText(e)}</strong></li>`).join('')}</ul>
     <p class="examples__note">Les changements de texte dans « Mes textes » sont illimités et gratuits.</p>`;
   $('[data-history]').innerHTML = s.requests.length
     ? s.requests.map((r) => `
@@ -192,7 +194,7 @@ function renderCredits(s) {
         <p class="req__text">${esc(r.text)}</p>
         <div class="req__meta">
           <span>${new Date(r.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
-          <strong>${r.estimate.credits} crédits</strong>
+          <strong>${creditsText(r.estimate)}</strong>
         </div>
       </article>`).join('')
     : '<p class="empty">Aucune demande pour l\'instant.</p>';
@@ -225,12 +227,13 @@ askText.addEventListener('input', () => {
       ]);
       if (seq !== estSeq || !estimate) return;
       currentEstimate = estimate;
-      const short = creditsState && estimate.credits > creditsState.remaining;
+      const short = creditsState && estimate.credits != null && estimate.credits > creditsState.remaining;
       estBox.innerHTML = `
         <div class="estimate__result ${short ? 'is-short' : ''}">
           <span class="estimate__type">${esc(estimate.label)}</span>
-          <strong class="estimate__credits">${estimate.credits} crédits</strong>
-          <span class="estimate__delay">Délai estimé : ${esc(estimate.delay)}</span>
+          <strong class="estimate__credits">${creditsText(estimate)}</strong>
+          <span class="estimate__delay">${estimate.credits == null ? '' : 'Délai estimé : '}${esc(estimate.delay)}</span>
+          ${estimate.note ? `<span class="estimate__note">${esc(estimate.note)}</span>` : ''}
           ${short ? `<span class="estimate__warn">Il te reste ${creditsState.remaining} crédits.</span>` : ''}
         </div>`;
       askBtn.disabled = short;

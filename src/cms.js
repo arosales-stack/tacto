@@ -176,7 +176,7 @@ async function requestsState(env, client) {
   const { start, end } = period(client);
   const used = list
     .filter((r) => new Date(r.date) >= start && r.status !== 'refused')
-    .reduce((sum, r) => sum + r.estimate.credits, 0);
+    .reduce((sum, r) => sum + (r.estimate.credits ?? 0), 0); // unpriced requests reserve nothing
   return {
     total: client.credits.per_year,
     used,
@@ -195,7 +195,7 @@ async function createRequest(request, env, client) {
 
   const est = estimate(clean);
   const state = await requestsState(env, client);
-  if (est.credits > state.remaining) return json({ error: `Crédits insuffisants : ${est.credits} nécessaires, ${state.remaining} restants` }, 402);
+  if (est.credits != null && est.credits > state.remaining) return json({ error: `Crédits insuffisants : ${est.credits} nécessaires, ${state.remaining} restants` }, 402);
 
   const list = (await kv(env).get(`${client.id}:requests`, 'json')) ?? [];
   list.push({ id: crypto.randomUUID(), date: new Date().toISOString(), text: clean, estimate: est, status: 'pending' });

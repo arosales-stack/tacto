@@ -157,6 +157,7 @@ h1, h2, p { margin: 0; }
 .estimate__type { font-weight: 700; }
 .estimate__credits { grid-row: span 2; font-size: 28px; font-weight: 800; letter-spacing: -0.03em; }
 .estimate__delay { font-size: 13px; color: var(--muted); }
+.estimate__note { grid-column: 1 / -1; font-size: 13px; margin-top: 6px; }
 .estimate__warn { grid-column: 1 / -1; color: var(--error); font-weight: 600; font-size: 14px; margin-top: 6px; }
 .estimate__result.is-short { border-color: var(--error); }
 @keyframes pop { from { opacity: 0; transform: translateY(4px); } }
