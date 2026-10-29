@@ -250,7 +250,7 @@ $('[data-ask]').addEventListener('submit', async (e) => {
     askText.value = '';
     estBox.innerHTML = '';
     currentEstimate = null;
-    toast('<strong>Demande envoyée.</strong> On revient vers toi rapidement.', 'ok');
+    toast('<strong>Demande envoyée.</strong> Elle sera traitée en moins de 24 h.', 'ok');
   } catch (err) {
     toast(esc(err.message), 'error');
   } finally {

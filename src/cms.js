@@ -271,7 +271,7 @@ function appHtml(client) {
     <section data-panel="requests" hidden>
       <div class="intro">
         <h1>Mes demandes</h1>
-        <p>Besoin de plus qu'un changement de texte ? Décris-le ici : on t'indique tout de suite combien de crédits ça représente.</p>
+        <p>Besoin de plus qu'un changement de texte ? Décris-le ici : on t'indique tout de suite combien de crédits ça représente. <strong>Chaque demande est traitée en moins de 24 h.</strong></p>
       </div>
       <div class="req-grid">
         <div class="card credits" data-credits></div>
