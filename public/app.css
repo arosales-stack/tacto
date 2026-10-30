@@ -118,3 +118,17 @@ button, textarea, input { font: inherit; color: inherit; }
 .login input:focus { outline: none; border-color: var(--ink); }
 .login .btn { margin-top: 6px; }
 .login .error { color: var(--rust); margin: 0; font-size: 14px; }
+
+/* ---------- Header links (tools + messages) ---------- */
+.top__links { display: flex; align-items: center; gap: 20px; }
+
+/* ---------- Contact messages (/outils/messages) ---------- */
+.msgs { display: flex; flex-direction: column; gap: 14px; }
+.msgs h1 { margin: 0 0 6px; font-size: 24px; }
+.msgs__empty { color: var(--muted); }
+.msg { padding: 18px 20px; display: flex; flex-direction: column; gap: 6px; }
+.msg p { margin: 0; }
+.msg a { color: var(--rust); }
+.msg__top { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.msg__top span { color: var(--muted); font-size: 14px; }
+.msg__text { white-space: pre-line; }

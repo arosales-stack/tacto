@@ -1,6 +1,8 @@
-// Tacto — private Worker.
-//   /            image optimizer (Tacto team), password TOOLS_PASSWORD
-//   /<client>    that client's CMS (e.g. /gutea), password from the client's config
+// Tacto Worker.
+//   /                  public agency page (public/index.html) + POST /api/contact
+//   /outils            image optimizer (Tacto team), password TOOLS_PASSWORD
+//   /outils/messages   contact form messages, same password
+//   /<client>          that client's CMS (e.g. /gutea), password from the client's config
 //
 // Secrets (set in Cloudflare, never in code):
 //   TOOLS_PASSWORD, OPENAI_API_KEY, GITHUB_TOKEN, and one CMS password per client (e.g. GUTEA_CMS_PASSWORD)
@@ -8,18 +10,20 @@
 import { checkPassword, sessionCookie, clearCookie, hasSession, redirect, json } from './auth.js';
 import { clients } from './clients/index.js';
 import { handleCms } from './cms.js';
+import { receiveContact, messagesPage } from './contact.js';
 
 const COOKIE = 'tacto_session';
 const OPENAI_EDITS = 'https://api.openai.com/v1/images/edits';
 
-// Files anyone can load: login page styles, logos, and the CMS front-end (no data in them)
-const PUBLIC_PATHS = [/^\/app\.css$/, /^\/logo\.png$/, /^\/cms\//, /^\/clients\/[\w-]+\//];
+// Files anyone can load: the agency page, login page styles, logos, and the CMS front-end (no data in them)
+const PUBLIC_PATHS = [/^\/$/, /^\/agence\.(css|js)$/, /^\/app\.css$/, /^\/logo\.png$/, /^\/cms\//, /^\/clients\/[\w-]+\//];
 
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
     if (PUBLIC_PATHS.some((re) => re.test(url.pathname))) return env.ASSETS.fetch(request);
+    if (url.pathname === '/api/contact' && request.method === 'POST') return receiveContact(request, env);
 
     // Client CMS: /gutea, /gutea/login, /gutea/api/...
     const clientId = url.pathname.split('/')[1];
@@ -38,6 +42,7 @@ export default {
     if (url.pathname === '/api/images/edit' && request.method === 'POST') {
       return proxyImageEdit(request, env);
     }
+    if (url.pathname === '/outils/messages') return messagesPage(env);
 
     return env.ASSETS.fetch(request);
   },
@@ -69,7 +74,7 @@ async function proxyImageEdit(request, env) {
 async function login(request, env) {
   const form = await request.formData();
   if (!(await checkPassword(form.get('password'), env.TOOLS_PASSWORD))) return loginPage('Wrong password');
-  return redirect('/', await sessionCookie(COOKIE, env.TOOLS_PASSWORD));
+  return redirect('/outils', await sessionCookie(COOKIE, env.TOOLS_PASSWORD));
 }
 
 function loginPage(error = '') {
