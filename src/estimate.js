@@ -44,5 +44,5 @@ export function estimate(text) {
 
 export const EXAMPLES = [
   ...RULES.map(({ label, credits }) => ({ label, credits })),
-  { label: 'Vente en ligne, paiement, appli…', credits: null },
+  { id: 'out', label: 'Vente en ligne, paiement, appli…', credits: null },
 ];

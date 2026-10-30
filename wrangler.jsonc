@@ -2,13 +2,16 @@
   "name": "tacto",
   "main": "src/worker.js",
   "compatibility_date": "2026-10-01",
+  // Runs before every deploy: builds the agency site + copies public/ into dist/ (see build.mjs)
+  "build": { "command": "node build.mjs" },
   "assets": {
-    "directory": "./public",
+    "directory": "./dist",
     "binding": "ASSETS",
-    // every request goes through the Worker first, so nothing is served without login
-    "run_worker_first": true
+    // every request goes through the Worker first: logins, security headers, private paths
+    "run_worker_first": true,
+    "not_found_handling": "404-page"
   },
-  // CMS requests & credits. No id: Cloudflare creates the namespace on first deploy.
+  // CMS requests & credits, contact messages, rate-limit counters. No id: Cloudflare creates the namespace on first deploy.
   "kv_namespaces": [{ "binding": "CMS_KV" }]
   // Secrets — set in Cloudflare (Worker > Settings > Variables and Secrets), never here:
   //   TOOLS_PASSWORD, OPENAI_API_KEY, GITHUB_TOKEN, GUTEA_CMS_PASSWORD

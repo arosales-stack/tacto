@@ -1,0 +1,7 @@
+<header class="top">
+  <a class="wordmark" href="/" aria-label="tacto, accueil">{{site.name}}<span class="dot"></span></a>
+  <nav class="top__nav" aria-label="Menu principal">
+    {{#each nav}}<a class="top__link" href="{{.href}}">{{.label}}</a>
+    {{/each}}<a class="btn btn--small" href="{{cta.href}}">{{cta.label}}</a>
+  </nav>
+</header>
