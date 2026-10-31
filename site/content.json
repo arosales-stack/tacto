@@ -21,26 +21,26 @@
   "work": [
     {
       "number": "01",
-      "name": "Maison Levain",
-      "kind": "Boulangerie · Paris 11e",
-      "tag": "Carte du jour",
-      "shot": "boulangerie",
+      "name": "Metodas",
+      "kind": "Collectif marketing freelance · Paris",
+      "tag": "Site vitrine",
+      "shot": "metodas",
       "tone": "yellow"
     },
     {
       "number": "02",
-      "name": "Atelier Kiln",
-      "kind": "Céramique · Montreuil",
-      "tag": "Réservation de cours",
-      "shot": "atelier",
+      "name": "Table & Co",
+      "kind": "Location de vaisselle vintage",
+      "tag": "Catalogue de location",
+      "shot": "table & co",
       "tone": "lilac"
     },
     {
       "number": "03",
-      "name": "Pétale",
-      "kind": "Fleuriste · Paris 18e",
-      "tag": "Bouquets sur commande",
-      "shot": "fleuriste",
+      "name": "Ayudave",
+      "kind": "Aide humanitaire · Venezuela",
+      "tag": "Dons vérifiés",
+      "shot": "ayudave",
       "tone": "mint"
     }
   ],

@@ -29,7 +29,7 @@ export async function receiveContact(request, env) {
     clean[key] = value;
   }
   if (clean.site && !/^https?:\/\//i.test(clean.site)) clean.site = `https://${clean.site}`; // never store a javascript: link
-  if (REQUIRED.some((k) => !clean[k])) return reply({ error: 'Il manque votre nom, votre commerce ou un moyen de vous joindre.' }, 400);
+  if (REQUIRED.some((k) => !clean[k])) return reply({ error: 'Il manque votre nom, votre entreprise ou un moyen de vous joindre.' }, 400);
   if (!env.CMS_KV) return reply({ error: 'Envoi impossible pour le moment.' }, 500);
 
   const date = new Date().toISOString();

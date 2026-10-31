@@ -27,7 +27,7 @@ if (form) {
     const required = [...form.querySelectorAll('[required]')];
     required.forEach((el) => el.setAttribute('aria-invalid', String(!el.value.trim())));
     const missing = required.filter((el) => !el.value.trim());
-    if (missing.length) { say('Il manque votre nom, votre commerce ou un moyen de vous joindre.', 'error'); missing[0].focus(); return; }
+    if (missing.length) { say('Il manque votre nom, votre entreprise ou un moyen de vous joindre.', 'error'); missing[0].focus(); return; }
 
     button.disabled = true;
     say('Envoi…');
