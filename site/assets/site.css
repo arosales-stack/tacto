@@ -206,8 +206,9 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
   .btn--big { font-size: 16px; padding-left: 22px; }
   .hero .btn--big { width: 100%; }
   .hero__title { font-size: min(13vw, 9svh); }
-  .hero__title { margin-top: auto; } /* title, text and button read as one block at the bottom of the screen */
-  .hero { justify-content: flex-start; }
+  /* Phones: the hero is as tall as its content (no empty band), title sits under the label; the next cards peek in below */
+  .hero { min-height: 0; justify-content: flex-start; gap: 28px; }
+  .hero__title { margin-top: clamp(16px, 6svh, 56px); }
   .tile { min-height: 0; gap: 32px; }
   .row__value { font-size: 17px; }
   .foot { grid-template-columns: 1fr auto; }
