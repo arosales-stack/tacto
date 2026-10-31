@@ -5,57 +5,181 @@
     "year": "2026"
   },
   "nav": [
-    { "label": "Travaux", "href": "/#travaux" },
-    { "label": "Comparer", "href": "/#comparer" }
+    {
+      "label": "Travaux",
+      "href": "/#travaux"
+    },
+    {
+      "label": "Comparer",
+      "href": "/#comparer"
+    }
   ],
-  "cta": { "label": "Démarrer", "href": "/#contact" },
+  "cta": {
+    "label": "Démarrer",
+    "href": "/#contact"
+  },
   "work": [
-    { "number": "01", "name": "Maison Levain", "kind": "Boulangerie · Paris 11e", "tag": "Carte du jour", "shot": "boulangerie", "tone": "yellow" },
-    { "number": "02", "name": "Atelier Kiln", "kind": "Céramique · Montreuil", "tag": "Réservation de cours", "shot": "atelier", "tone": "lilac" },
-    { "number": "03", "name": "Pétale", "kind": "Fleuriste · Paris 18e", "tag": "Bouquets sur commande", "shot": "fleuriste", "tone": "mint" }
+    {
+      "number": "01",
+      "name": "Maison Levain",
+      "kind": "Boulangerie · Paris 11e",
+      "tag": "Carte du jour",
+      "shot": "boulangerie",
+      "tone": "yellow"
+    },
+    {
+      "number": "02",
+      "name": "Atelier Kiln",
+      "kind": "Céramique · Montreuil",
+      "tag": "Réservation de cours",
+      "shot": "atelier",
+      "tone": "lilac"
+    },
+    {
+      "number": "03",
+      "name": "Pétale",
+      "kind": "Fleuriste · Paris 18e",
+      "tag": "Bouquets sur commande",
+      "shot": "fleuriste",
+      "tone": "mint"
+    }
   ],
   "compare": {
     "us": [
-      { "label": "Design", "text": "Sur mesure, fait pour votre commerce" },
-      { "label": "Modifier vos textes", "text": "Espace simple, mise en page protégée" },
-      { "label": "Changements plus gros", "text": "Faits pour vous en moins de 24 h" },
-      { "label": "Maintenance", "text": "Aucune. Zéro plugin." },
-      { "label": "Vitesse", "text": "Instantané, même en 4G" },
-      { "label": "Prix", "text": "Un prix par an, tout compris" }
+      {
+        "label": "Design",
+        "text": "Sur mesure, fait pour vous"
+      },
+      {
+        "label": "Modifier vos textes",
+        "text": "Espace simple, mise en page protégée"
+      },
+      {
+        "label": "Changements plus gros",
+        "text": "Faits pour vous en moins de 24 h"
+      },
+      {
+        "label": "Votre site",
+        "text": "À vous : vous partez avec quand vous voulez"
+      },
+      {
+        "label": "Vitesse",
+        "text": "Instantané, même en 4G"
+      },
+      {
+        "label": "Prix",
+        "text": "Un prix par an, tout compris"
+      }
     ],
     "rivals": [
-      { "id": "wordpress", "label": "WordPress", "rows": [
-        { "label": "Design", "text": "Thème acheté, adapté tant bien que mal", "mid": false },
-        { "label": "Modifier vos textes", "text": "Back-office complexe, facile à casser", "mid": false },
-        { "label": "Changements plus gros", "text": "À faire soi-même ou facturé", "mid": false },
-        { "label": "Maintenance", "text": "Plugins et mises à jour à surveiller", "mid": false },
-        { "label": "Vitesse", "text": "Souvent lent sur mobile", "mid": false },
-        { "label": "Prix", "text": "Hébergement + thème + plugins + dev", "mid": false }
-      ] },
-      { "id": "wix", "label": "Wix", "rows": [
-        { "label": "Design", "text": "Template vu mille fois", "mid": false },
-        { "label": "Modifier vos textes", "text": "Glisser-déposer : tout bouge", "mid": true },
-        { "label": "Changements plus gros", "text": "À faire soi-même", "mid": false },
-        { "label": "Maintenance", "text": "Incluse, mais impossible de partir", "mid": true },
-        { "label": "Vitesse", "text": "Lourd sur mobile", "mid": false },
-        { "label": "Prix", "text": "Abonnement mensuel + options", "mid": true }
-      ] },
-      { "id": "squarespace", "label": "Squarespace", "rows": [
-        { "label": "Design", "text": "Template élégant mais générique", "mid": true },
-        { "label": "Modifier vos textes", "text": "Possible, mise en page fragile", "mid": true },
-        { "label": "Changements plus gros", "text": "À faire soi-même", "mid": false },
-        { "label": "Maintenance", "text": "Incluse, mais impossible de partir", "mid": true },
-        { "label": "Vitesse", "text": "Correcte", "mid": true },
-        { "label": "Prix", "text": "Abonnement mensuel", "mid": true }
-      ] },
-      { "id": "aucun", "label": "Pas de site", "rows": [
-        { "label": "Design", "text": "Vos clients ne vous trouvent pas", "mid": false },
-        { "label": "Modifier vos textes", "text": "Infos éparpillées sur Google et Insta", "mid": false },
-        { "label": "Changements plus gros", "text": "—", "mid": false },
-        { "label": "Maintenance", "text": "—", "mid": false },
-        { "label": "Vitesse", "text": "—", "mid": false },
-        { "label": "Prix", "text": "Gratuit, mais des clients en moins", "mid": false }
-      ] }
+      {
+        "id": "wordpress",
+        "label": "WordPress",
+        "rows": [
+          {
+            "label": "Design",
+            "text": "Thème acheté, adapté tant bien que mal",
+            "mid": false
+          },
+          {
+            "label": "Modifier vos textes",
+            "text": "Back-office complexe, facile à casser",
+            "mid": false
+          },
+          {
+            "label": "Changements plus gros",
+            "text": "À faire soi-même ou facturé",
+            "mid": false
+          },
+          {
+            "label": "Votre site",
+            "text": "À vous, mais tout à gérer",
+            "mid": true
+          },
+          {
+            "label": "Vitesse",
+            "text": "Souvent lent sur mobile",
+            "mid": false
+          },
+          {
+            "label": "Prix",
+            "text": "Hébergement + thème + plugins + dev",
+            "mid": false
+          }
+        ]
+      },
+      {
+        "id": "wix",
+        "label": "Wix",
+        "rows": [
+          {
+            "label": "Design",
+            "text": "Template vu mille fois",
+            "mid": false
+          },
+          {
+            "label": "Modifier vos textes",
+            "text": "Glisser-déposer : tout bouge",
+            "mid": true
+          },
+          {
+            "label": "Changements plus gros",
+            "text": "À faire soi-même",
+            "mid": false
+          },
+          {
+            "label": "Votre site",
+            "text": "Impossible de partir avec : il reste chez Wix",
+            "mid": false
+          },
+          {
+            "label": "Vitesse",
+            "text": "Lourd sur mobile",
+            "mid": false
+          },
+          {
+            "label": "Prix",
+            "text": "Abonnement mensuel + options",
+            "mid": true
+          }
+        ]
+      },
+      {
+        "id": "framer",
+        "label": "Framer",
+        "rows": [
+          {
+            "label": "Design",
+            "text": "Beau, mais à construire vous-même",
+            "mid": true
+          },
+          {
+            "label": "Modifier vos textes",
+            "text": "Éditeur puissant mais complexe",
+            "mid": true
+          },
+          {
+            "label": "Changements plus gros",
+            "text": "À faire soi-même ou freelance",
+            "mid": false
+          },
+          {
+            "label": "Votre site",
+            "text": "Impossible d'exporter le site",
+            "mid": false
+          },
+          {
+            "label": "Vitesse",
+            "text": "Rapide",
+            "mid": true
+          },
+          {
+            "label": "Prix",
+            "text": "Abonnement mensuel, par site",
+            "mid": true
+          }
+        ]
+      }
     ]
   }
 }
