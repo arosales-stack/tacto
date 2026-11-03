@@ -16,7 +16,7 @@
       {{/each}}<li>{{pricing.credits}} {{t.pricing.first_credits}}</li>
     </ul>
   </article>
-  <article class="plan plan--lilac">
+  <article class="plan">
     <p class="mono">{{t.pricing.next_label}}</p>
     <p class="plan__price">{{pricing.yearly}}<small> {{t.pricing.per_year}}</small></p>
     <ul class="checklist">
@@ -29,7 +29,7 @@
 {{> steps}}
 
 <!-- CREDITS -->
-<section class="card section credits-info credits-info--mint">
+<section class="card section credits-info">
   <div class="credits-info__intro">
     <h2 class="h2">{{t.pricing.credits_title}}</h2>
     <p class="lead">{{t.pricing.credits_lead}}</p>
@@ -42,7 +42,7 @@
 </section>
 
 <!-- OWNERSHIP -->
-<section class="card section owner owner--yellow">
+<section class="card section owner">
   <h2 class="h2">{{html t.pricing.own_title}}</h2>
   <p class="lead">{{t.pricing.own_lead}}</p>
   <a class="btn btn--big" href="{{cta.href}}">{{t.home.button}}<span class="btn__arrow" aria-hidden="true">→</span></a>

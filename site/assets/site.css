@@ -253,9 +253,6 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .plan { background: var(--white); border-radius: var(--r-xl); padding: var(--pad); display: flex; flex-direction: column; gap: 18px; }
 .plan--dark { background: var(--ink); color: var(--white); }
 .plan--dark .mono { color: #B5B0A8; }
-.plan--lilac { background: var(--lilac); }
-.plan--lilac .checklist, .plan--lilac .checklist li { border-color: rgba(20, 20, 20, .14); }
-.plan--lilac .checklist li::before { background: var(--white); }
 .plan__price { font-size: clamp(56px, 7vw, 96px); font-weight: 800; letter-spacing: -.06em; line-height: .9; }
 .plan__price small { font-size: .3em; font-weight: 600; letter-spacing: -.02em; }
 .checklist { display: flex; flex-direction: column; border-top: 1px solid var(--line-light); }
@@ -272,12 +269,6 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .credits-info__note { font-size: 15px; color: var(--muted); }
 
 .owner { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
-.owner--yellow { background: var(--yellow); }
-.owner--yellow mark { background: var(--white); }
-.owner--yellow .lead { color: var(--ink); }
-.credits-info--mint { background: var(--mint); }
-.credits-info--mint .credit-grid li { border-bottom-color: rgba(20, 20, 20, .14); }
-.credits-info--mint .credits-info__note { color: #1F4D3A; }
 
 /* ---------- About page ---------- */
 .team { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
