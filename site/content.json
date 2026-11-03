@@ -2,196 +2,120 @@
   "site": {
     "name": "tacto",
     "city": "Paris",
-    "year": "2026"
+    "year": "2026",
+    "url": "https://tacto.a-rosales.workers.dev"
   },
   "nav": [
     {
-      "label": "Travaux",
-      "href": "/#travaux",
-      "phone": false
+      "key": "travaux",
+      "page": "index",
+      "anchor": "#travaux"
     },
     {
-      "label": "Comparer",
-      "href": "/#comparer",
-      "phone": false
+      "key": "comparer",
+      "page": "index",
+      "anchor": "#comparer"
     },
     {
-      "label": "Tarifs",
-      "href": "/tarifs",
-      "phone": true
+      "key": "tarifs",
+      "page": "tarifs"
+    },
+    {
+      "key": "apropos",
+      "page": "a-propos"
     }
   ],
   "cta": {
-    "label": "Démarrer",
-    "href": "/#contact"
+    "page": "index",
+    "anchor": "#contact"
+  },
+  "pricing": {
+    "first_year": 450,
+    "yearly": 150,
+    "credits": "100"
   },
   "work": [
     {
+      "id": "metodas",
       "number": "01",
       "name": "Metodas",
-      "kind": "Collectif marketing freelance · Paris",
-      "tag": "Site vitrine",
       "shot": "metodas",
       "tone": "yellow"
     },
     {
+      "id": "tableandco",
       "number": "02",
       "name": "Table & Co",
-      "kind": "Location de vaisselle vintage",
-      "tag": "Catalogue de location",
       "shot": "table & co",
       "tone": "lilac"
     },
     {
+      "id": "ayudave",
       "number": "03",
       "name": "Ayudave",
-      "kind": "Aide humanitaire · Venezuela",
-      "tag": "Dons vérifiés",
       "shot": "ayudave",
       "tone": "mint"
     }
   ],
+  "team": [
+    {
+      "id": "audra",
+      "photo": "",
+      "tone": "pink",
+      "ai": false
+    },
+    {
+      "id": "dev",
+      "photo": "",
+      "tone": "lilac",
+      "ai": false
+    },
+    {
+      "id": "ai",
+      "photo": "",
+      "tone": "mint",
+      "ai": true
+    }
+  ],
   "compare": {
-    "us": [
-      {
-        "label": "Design",
-        "text": "Sur mesure, fait pour vous"
-      },
-      {
-        "label": "Modifier vos textes",
-        "text": "Espace simple, mise en page protégée"
-      },
-      {
-        "label": "Changements plus gros",
-        "text": "Faits pour vous en moins de 24 h"
-      },
-      {
-        "label": "Votre site",
-        "text": "À vous : vous partez avec quand vous voulez"
-      },
-      {
-        "label": "Vitesse",
-        "text": "Instantané, même en 4G"
-      },
-      {
-        "label": "Prix",
-        "text": "Un prix par an, tout compris"
-      }
-    ],
+    "rows": 6,
     "rivals": [
       {
         "id": "wordpress",
         "label": "WordPress",
-        "rows": [
-          {
-            "label": "Design",
-            "text": "Thème acheté, adapté tant bien que mal",
-            "mid": false
-          },
-          {
-            "label": "Modifier vos textes",
-            "text": "Back-office complexe, facile à casser",
-            "mid": false
-          },
-          {
-            "label": "Changements plus gros",
-            "text": "À faire soi-même ou facturé",
-            "mid": false
-          },
-          {
-            "label": "Votre site",
-            "text": "À vous, mais tout à gérer",
-            "mid": true
-          },
-          {
-            "label": "Vitesse",
-            "text": "Souvent lent sur mobile",
-            "mid": false
-          },
-          {
-            "label": "Prix",
-            "text": "Hébergement + thème + plugins + dev",
-            "mid": false
-          }
+        "mid": [
+          false,
+          false,
+          false,
+          true,
+          false,
+          false
         ]
       },
       {
         "id": "wix",
         "label": "Wix",
-        "rows": [
-          {
-            "label": "Design",
-            "text": "Template vu mille fois",
-            "mid": false
-          },
-          {
-            "label": "Modifier vos textes",
-            "text": "Glisser-déposer : tout bouge",
-            "mid": true
-          },
-          {
-            "label": "Changements plus gros",
-            "text": "À faire soi-même",
-            "mid": false
-          },
-          {
-            "label": "Votre site",
-            "text": "Impossible de partir avec : il reste chez Wix",
-            "mid": false
-          },
-          {
-            "label": "Vitesse",
-            "text": "Lourd sur mobile",
-            "mid": false
-          },
-          {
-            "label": "Prix",
-            "text": "Abonnement mensuel + options",
-            "mid": true
-          }
+        "mid": [
+          false,
+          true,
+          false,
+          false,
+          false,
+          true
         ]
       },
       {
         "id": "framer",
         "label": "Framer",
-        "rows": [
-          {
-            "label": "Design",
-            "text": "Beau, mais à construire vous-même",
-            "mid": true
-          },
-          {
-            "label": "Modifier vos textes",
-            "text": "Éditeur puissant mais complexe",
-            "mid": true
-          },
-          {
-            "label": "Changements plus gros",
-            "text": "À faire soi-même ou freelance",
-            "mid": false
-          },
-          {
-            "label": "Votre site",
-            "text": "Impossible d'exporter le site",
-            "mid": false
-          },
-          {
-            "label": "Vitesse",
-            "text": "Rapide",
-            "mid": true
-          },
-          {
-            "label": "Prix",
-            "text": "Abonnement mensuel, par site",
-            "mid": true
-          }
+        "mid": [
+          true,
+          true,
+          false,
+          false,
+          true,
+          true
         ]
       }
     ]
-  },
-  "pricing": {
-    "first_year": "450 €",
-    "yearly": "150 €",
-    "credits": "100"
   }
 }

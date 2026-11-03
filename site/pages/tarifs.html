@@ -1,36 +1,27 @@
----
-title: Tarifs — tacto
-description: 450 € la première année, puis 150 € par an. Site sur mesure, hébergement, modifications et 100 crédits par an inclus. Le site reste à vous.
-nav: Tarifs
----
 <section class="card hero hero--short">
-  <p class="mono">Tarifs</p>
-  <h1 class="hero__title">Un prix par an. <mark>Tout</mark> compris.</h1>
+  <p class="mono">{{t.pricing.label}}</p>
+  <h1 class="hero__title">{{html t.pricing.title}}</h1>
   <div class="hero__foot">
-    <p class="lead">Payé une fois par an, pas d’abonnement mensuel.</p>
+    <p class="lead">{{t.pricing.lead}}</p>
   </div>
 </section>
 
 <!-- TWO PRICES -->
-<section class="plans" aria-label="Les deux tarifs">
+<section class="plans" aria-label="{{t.pricing.plans_label}}">
   <article class="plan plan--dark">
-    <p class="mono">Première année</p>
+    <p class="mono">{{t.pricing.first_label}}</p>
     <p class="plan__price">{{pricing.first_year}}</p>
     <ul class="checklist">
-      <li>Votre site sur mesure, conçu pour votre activité</li>
-      <li>Adapté au mobile, à la tablette et à l'ordinateur</li>
-      <li>Hébergement, sécurité et mises à jour</li>
-      <li>Votre espace pour modifier textes, prix et horaires, à volonté</li>
-      <li>{{pricing.credits}} crédits pour les changements plus importants</li>
+      {{#each t.pricing.first}}<li>{{.}}</li>
+      {{/each}}<li>{{pricing.credits}} {{t.pricing.first_credits}}</li>
     </ul>
   </article>
   <article class="plan">
-    <p class="mono">Les années suivantes</p>
-    <p class="plan__price">{{pricing.yearly}}<small> / an</small></p>
+    <p class="mono">{{t.pricing.next_label}}</p>
+    <p class="plan__price">{{pricing.yearly}}<small> {{t.pricing.per_year}}</small></p>
     <ul class="checklist">
-      <li>Hébergement, sécurité et mises à jour</li>
-      <li>Votre espace pour modifier vos textes, à volonté</li>
-      <li>{{pricing.credits}} nouveaux crédits chaque année</li>
+      {{#each t.pricing.next}}<li>{{.}}</li>
+      {{/each}}<li>{{pricing.credits}} {{t.pricing.next_credits}}</li>
     </ul>
   </article>
 </section>
@@ -38,19 +29,19 @@ nav: Tarifs
 <!-- CREDITS -->
 <section class="card section credits-info">
   <div class="credits-info__intro">
-    <h2 class="h2">Les crédits</h2>
-    <p class="lead">Les changements de texte sont illimités et gratuits. Pour le reste, vous faites une demande depuis votre espace : vous voyez tout de suite combien de crédits elle compte, et elle est traitée en moins de 24 h.</p>
+    <h2 class="h2">{{t.pricing.credits_title}}</h2>
+    <p class="lead">{{t.pricing.credits_lead}}</p>
   </div>
   <ul class="credit-grid">
-    {{#each credit_grid}}<li><span>{{.label}}</span><strong>{{.credits}} crédits</strong></li>
+    {{#each credit_grid}}<li><span>{{.label}}</span><strong>{{.credits}} {{t.pricing.credits_unit}}</strong></li>
     {{/each}}
   </ul>
-  <p class="credits-info__note">Vente en ligne, paiement, application… : ce sont de nouveaux projets, chiffrés à part.</p>
+  <p class="credits-info__note">{{t.pricing.credits_note}}</p>
 </section>
 
 <!-- OWNERSHIP -->
 <section class="card section owner">
-  <h2 class="h2">Le site est <mark>à vous</mark>.</h2>
-  <p class="lead">Vos textes, vos photos, votre site : si un jour vous arrêtez, vous partez avec.</p>
-  <a class="btn btn--big" href="/#contact">Parlons de votre site<span class="btn__arrow" aria-hidden="true">→</span></a>
+  <h2 class="h2">{{html t.pricing.own_title}}</h2>
+  <p class="lead">{{t.pricing.own_lead}}</p>
+  <a class="btn btn--big" href="{{cta.href}}">{{t.home.button}}<span class="btn__arrow" aria-hidden="true">→</span></a>
 </section>

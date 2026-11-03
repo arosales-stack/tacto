@@ -1,7 +1,12 @@
-<header class="top">
-  <a class="wordmark" href="/" aria-label="tacto, accueil">{{site.name}}<span class="dot"></span></a>
-  <nav class="top__nav" aria-label="Menu principal">
-    {{#each nav}}<a class="top__link{{#if .phone}}{{else}} top__link--wide{{/if}}" href="{{.href}}" data-nav="{{.label}}">{{.label}}</a>
-    {{/each}}<a class="btn btn--small" href="{{cta.href}}">{{cta.label}}</a>
+<header class="top" data-menu>
+  <a class="wordmark" href="{{home}}" aria-label="{{t.home_label}}">{{site.name}}<span class="dot"></span></a>
+  <nav class="top__nav" id="menu" aria-label="{{t.nav_label}}">
+    {{#each nav}}<a class="top__link" href="{{.href}}"{{#if .current}} aria-current="page"{{/if}}>{{.label}}</a>
+    {{/each}}
   </nav>
+  <div class="top__end">
+    <a class="lang-switch" href="{{switch.href}}" hreflang="{{switch.lang}}" lang="{{switch.lang}}" aria-label="{{switch.name}}">{{switch.label}}</a>
+    <a class="btn btn--small" href="{{cta.href}}">{{cta.label}}</a>
+    <button class="burger" type="button" aria-controls="menu" aria-expanded="false" data-label-open="{{t.menu}}" data-label-close="{{t.close}}" aria-label="{{t.menu}}"><span></span></button>
+  </div>
 </header>

@@ -1,8 +1,9 @@
 <footer class="foot">
   <span class="mono">{{site.name}} · {{site.city}}</span>
-  <nav class="foot__nav" aria-label="Pied de page">
+  <nav class="foot__nav" aria-label="{{t.footer_label}}">
     {{#each nav}}<a class="mono" href="{{.href}}">{{.label}}</a>
-    {{/each}}<a class="mono" href="{{cta.href}}">Contact</a>
+    {{/each}}<a class="mono" href="{{cta.href}}">{{t.contact_link}}</a>
+    <a class="mono" href="{{switch.href}}" hreflang="{{switch.lang}}" lang="{{switch.lang}}">{{switch.name}}</a>
   </nav>
   <span class="mono">© {{site.year}}</span>
 </footer>

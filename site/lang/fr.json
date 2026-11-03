@@ -1,0 +1,221 @@
+{
+  "lang": "fr",
+  "label": "FR",
+  "switch_label": "Version française",
+  "slugs": {
+    "index": "",
+    "tarifs": "tarifs",
+    "a-propos": "a-propos",
+    "404": "404"
+  },
+  "skip": "Aller au contenu",
+  "menu": "Menu",
+  "close": "Fermer",
+  "home_label": "tacto, accueil",
+  "nav_label": "Menu principal",
+  "footer_label": "Pied de page",
+  "nav": {
+    "travaux": "Travaux",
+    "comparer": "Comparer",
+    "tarifs": "Tarifs",
+    "apropos": "À propos"
+  },
+  "cta": "Démarrer",
+  "contact_link": "Contact",
+  "pages": {
+    "index": {
+      "title": "tacto — Studio web à Paris : des sites simples, beaux et à vous",
+      "description": "Studio web à Paris : des sites sur mesure, simples et beaux, que vous modifiez vous-même. Et qui restent à vous."
+    },
+    "tarifs": {
+      "title": "Tarifs — tacto",
+      "description": "450 € la première année, puis 150 € par an. Site sur mesure, hébergement, modifications et 100 crédits par an inclus. Le site reste à vous."
+    },
+    "a-propos": {
+      "title": "À propos — tacto",
+      "description": "L'équipe tacto : une stratège marketing, un développeur designer et l'IA."
+    },
+    "404": {
+      "title": "Page introuvable — tacto",
+      "description": "Cette page n'existe pas."
+    }
+  },
+  "home": {
+    "label": "Studio web",
+    "title": "Des sites simples qui donnent <mark>envie</mark>.",
+    "lead": "Entreprises, marques, associations, indépendants : on crée votre site sur mesure, simple et beau. Vous changez vos textes quand vous voulez, on s'occupe du reste.",
+    "button": "Parlons de votre site",
+    "tiles_label": "Ce qui est inclus",
+    "edit_label": "Horaires · samedi",
+    "edit_value": "10h – 19h",
+    "edit_title": "Vos textes, vous-même.",
+    "edit_text": "Textes, prix, horaires, actus : à volonté, gratuit. La mise en page ne casse jamais.",
+    "credits_title": "Crédits par an.",
+    "credits_text": "Nouvelle page, photos, formulaire : demandez, c'est fait en moins de 24 h.",
+    "chips": [
+      {
+        "text": "Mobile",
+        "highlight": false
+      },
+      {
+        "text": "Hébergé",
+        "highlight": false
+      },
+      {
+        "text": "Zéro plugin",
+        "highlight": false
+      },
+      {
+        "text": "Ultra rapide",
+        "highlight": true
+      },
+      {
+        "text": "Anciens liens gardés",
+        "highlight": false
+      }
+    ],
+    "tech_title": "Rien de technique.",
+    "tech_text": "Hébergement, sécurité, mises à jour : inclus, et vous n'y pensez plus.",
+    "work_title": "Travaux récents",
+    "work_count": "projets",
+    "screenshot": "capture"
+  },
+  "work": {
+    "metodas": {
+      "kind": "Collectif marketing freelance · Paris",
+      "tag": "Site vitrine"
+    },
+    "tableandco": {
+      "kind": "Location de vaisselle vintage",
+      "tag": "Catalogue de location"
+    },
+    "ayudave": {
+      "kind": "Aide humanitaire · Venezuela",
+      "tag": "Dons vérifiés"
+    }
+  },
+  "compare": {
+    "title": "tacto contre",
+    "tabs_label": "Comparer avec",
+    "badge": "recommandé",
+    "yes": "oui",
+    "mid": "moyen",
+    "no": "non",
+    "labels": [
+      "Design",
+      "Modifier vos textes",
+      "Changements plus gros",
+      "Votre site",
+      "Vitesse",
+      "Prix"
+    ],
+    "us": [
+      "Sur mesure, fait pour vous",
+      "Espace simple, mise en page protégée",
+      "Faits pour vous en moins de 24 h",
+      "À vous : vous partez avec quand vous voulez",
+      "Instantané, même en 4G",
+      "Un prix par an, tout compris"
+    ],
+    "rivals": {
+      "wordpress": [
+        "Thème acheté, adapté tant bien que mal",
+        "Back-office complexe, facile à casser",
+        "À faire soi-même ou facturé",
+        "À vous, mais tout à gérer",
+        "Souvent lent sur mobile",
+        "Hébergement + thème + plugins + dev"
+      ],
+      "wix": [
+        "Template vu mille fois",
+        "Glisser-déposer : tout bouge",
+        "À faire soi-même",
+        "Impossible de partir avec : il reste chez Wix",
+        "Lourd sur mobile",
+        "Abonnement mensuel + options"
+      ],
+      "framer": [
+        "Beau, mais à construire vous-même",
+        "Éditeur puissant mais complexe",
+        "À faire soi-même ou freelance",
+        "Impossible d'exporter le site",
+        "Rapide",
+        "Abonnement mensuel, par site"
+      ]
+    }
+  },
+  "contact": {
+    "title": "On fait<br>le vôtre ?",
+    "lead": "Envoyez le nom de votre projet ou le lien de votre site actuel. On vous répond sous 24 h avec une première idée.",
+    "name": "Votre nom",
+    "business": "Votre entreprise ou projet",
+    "contact": "E-mail ou téléphone",
+    "site": "Site actuel",
+    "message": "Un mot sur votre projet",
+    "optional": "(facultatif)",
+    "trap": "Ne pas remplir",
+    "button": "Démarrer un projet",
+    "missing": "Il manque votre nom, votre entreprise ou un moyen de vous joindre.",
+    "sending": "Envoi…",
+    "ok": "Merci ! On vous répond sous 24 h.",
+    "failed": "Envoi impossible, réessayez dans un instant."
+  },
+  "pricing": {
+    "label": "Tarifs",
+    "title": "Un prix par an. <mark>Tout</mark> compris.",
+    "lead": "Payé une fois par an, pas d'abonnement mensuel.",
+    "plans_label": "Les deux tarifs",
+    "first_label": "Première année",
+    "first": [
+      "Votre site sur mesure, conçu pour votre activité",
+      "Adapté au mobile, à la tablette et à l'ordinateur",
+      "Hébergement, sécurité et mises à jour",
+      "Votre espace pour modifier textes, prix et horaires, à volonté"
+    ],
+    "first_credits": "crédits pour les changements plus importants",
+    "next_label": "Les années suivantes",
+    "per_year": "/ an",
+    "next": [
+      "Hébergement, sécurité et mises à jour",
+      "Votre espace pour modifier vos textes, à volonté"
+    ],
+    "next_credits": "nouveaux crédits chaque année",
+    "credits_title": "Les crédits",
+    "credits_lead": "Les changements de texte sont illimités et gratuits. Pour le reste, vous faites une demande depuis votre espace : vous voyez tout de suite combien de crédits elle compte, et elle est traitée en moins de 24 h.",
+    "credits_unit": "crédits",
+    "credits_note": "Vente en ligne, paiement, application… : ce sont de nouveaux projets, chiffrés à part.",
+    "own_title": "Le site est <mark>à vous</mark>.",
+    "own_lead": "Vos textes, vos photos, votre site : si un jour vous arrêtez, vous partez avec."
+  },
+  "credit_labels": {},
+  "about": {
+    "label": "À propos",
+    "title": "Qui fait <mark>tacto</mark>.",
+    "lead": "Une petite équipe à Paris, épaulée par l'IA.",
+    "photo_soon": "photo à venir"
+  },
+  "team": {
+    "audra": {
+      "name": "Audra Rosales",
+      "role": "Fondatrice & stratège marketing",
+      "text": "Fondatrice de Metodas, collectif marketing freelance."
+    },
+    "dev": {
+      "name": "",
+      "role": "Développeur & designer",
+      "text": ""
+    },
+    "ai": {
+      "name": "L'IA",
+      "role": "Dans l'équipe",
+      "text": "Prépare vos demandes pour qu'elles soient traitées en moins de 24 h."
+    }
+  },
+  "notfound": {
+    "label": "Erreur 404",
+    "title": "Cette page n'existe <mark>pas</mark>.",
+    "lead": "Le lien est peut-être ancien ou mal copié.",
+    "button": "Retour à l'accueil"
+  },
+  "price_format": "{n} €"
+}

@@ -1,0 +1,219 @@
+{
+  "lang": "en",
+  "label": "EN",
+  "switch_label": "English version",
+  "slugs": {
+    "index": "",
+    "tarifs": "pricing",
+    "a-propos": "about"
+  },
+  "skip": "Skip to content",
+  "menu": "Menu",
+  "close": "Close",
+  "home_label": "tacto, home",
+  "nav_label": "Main menu",
+  "footer_label": "Footer",
+  "nav": {
+    "travaux": "Work",
+    "comparer": "Compare",
+    "tarifs": "Pricing",
+    "apropos": "About"
+  },
+  "cta": "Get started",
+  "contact_link": "Contact",
+  "pages": {
+    "index": {
+      "title": "tacto — Web studio in Paris: simple, beautiful websites that stay yours",
+      "description": "Web studio in Paris: custom websites, simple and beautiful, that you edit yourself. And that stay yours."
+    },
+    "tarifs": {
+      "title": "Pricing — tacto",
+      "description": "€450 the first year, then €150 per year. Custom website, hosting, edits and 100 credits a year included. The site stays yours."
+    },
+    "a-propos": {
+      "title": "About — tacto",
+      "description": "The tacto team: a marketing strategist, a developer-designer and AI."
+    }
+  },
+  "home": {
+    "label": "Web studio",
+    "title": "Simple websites that <mark>draw</mark> people in.",
+    "lead": "Businesses, brands, nonprofits, freelancers: we build your custom website, simple and beautiful. You edit your texts whenever you like, we handle the rest.",
+    "button": "Let's talk about your site",
+    "tiles_label": "What's included",
+    "edit_label": "Hours · Saturday",
+    "edit_value": "10am – 7pm",
+    "edit_title": "Edit it yourself.",
+    "edit_text": "Texts, prices, hours, news: as often as you like, free. The layout never breaks.",
+    "credits_title": "Credits per year.",
+    "credits_text": "New page, photos, a form: just ask, it's done within 24 hours.",
+    "chips": [
+      {
+        "text": "Mobile",
+        "highlight": false
+      },
+      {
+        "text": "Hosted",
+        "highlight": false
+      },
+      {
+        "text": "Zero plugins",
+        "highlight": false
+      },
+      {
+        "text": "Ultra fast",
+        "highlight": true
+      },
+      {
+        "text": "Old links kept",
+        "highlight": false
+      }
+    ],
+    "tech_title": "Nothing technical.",
+    "tech_text": "Hosting, security, updates: included, and off your mind.",
+    "work_title": "Recent work",
+    "work_count": "projects",
+    "screenshot": "screenshot"
+  },
+  "work": {
+    "metodas": {
+      "kind": "Freelance marketing collective · Paris",
+      "tag": "Showcase site"
+    },
+    "tableandco": {
+      "kind": "Vintage tableware rental",
+      "tag": "Rental catalogue"
+    },
+    "ayudave": {
+      "kind": "Humanitarian aid · Venezuela",
+      "tag": "Verified donations"
+    }
+  },
+  "compare": {
+    "title": "tacto vs",
+    "tabs_label": "Compare with",
+    "badge": "recommended",
+    "yes": "yes",
+    "mid": "so-so",
+    "no": "no",
+    "labels": [
+      "Design",
+      "Editing your texts",
+      "Bigger changes",
+      "Your site",
+      "Speed",
+      "Price"
+    ],
+    "us": [
+      "Custom-made, built for you",
+      "Simple editor, protected layout",
+      "Done for you within 24 hours",
+      "Yours: take it with you whenever you want",
+      "Instant, even on 4G",
+      "One yearly price, all included"
+    ],
+    "rivals": {
+      "wordpress": [
+        "Bought theme, adapted as well as possible",
+        "Complex back office, easy to break",
+        "Do it yourself or pay extra",
+        "Yours, but yours to manage",
+        "Often slow on mobile",
+        "Hosting + theme + plugins + developer"
+      ],
+      "wix": [
+        "Template seen a thousand times",
+        "Drag and drop: everything moves",
+        "Do it yourself",
+        "You can't take it with you: it stays on Wix",
+        "Heavy on mobile",
+        "Monthly subscription + add-ons"
+      ],
+      "framer": [
+        "Beautiful, but you build it yourself",
+        "Powerful but complex editor",
+        "Do it yourself or hire a freelancer",
+        "Your site can't be exported",
+        "Fast",
+        "Monthly subscription, per site"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Shall we<br>build yours?",
+    "lead": "Send us your project's name or a link to your current site. We'll reply within 24 hours with a first idea.",
+    "name": "Your name",
+    "business": "Your business or project",
+    "contact": "Email or phone",
+    "site": "Current site",
+    "message": "A word about your project",
+    "optional": "(optional)",
+    "trap": "Leave empty",
+    "button": "Start a project",
+    "missing": "Please add your name, your business and a way to reach you.",
+    "sending": "Sending…",
+    "ok": "Thank you! We'll reply within 24 hours.",
+    "failed": "Couldn't send, please try again in a moment."
+  },
+  "pricing": {
+    "label": "Pricing",
+    "title": "One yearly price. <mark>All</mark> included.",
+    "lead": "Paid once a year, no monthly subscription.",
+    "plans_label": "The two prices",
+    "first_label": "First year",
+    "first": [
+      "Your custom website, designed for your business",
+      "Works on mobile, tablet and computer",
+      "Hosting, security and updates",
+      "Your own space to edit texts, prices and hours, as often as you like"
+    ],
+    "first_credits": "credits for bigger changes",
+    "next_label": "Following years",
+    "per_year": "/ year",
+    "next": [
+      "Hosting, security and updates",
+      "Your own space to edit your texts, as often as you like"
+    ],
+    "next_credits": "new credits every year",
+    "credits_title": "Credits",
+    "credits_lead": "Text changes are unlimited and free. For anything else, send a request from your space: you instantly see how many credits it takes, and it's handled within 24 hours.",
+    "credits_unit": "credits",
+    "credits_note": "Online sales, payments, apps…: these are new projects, quoted separately.",
+    "own_title": "The site is <mark>yours</mark>.",
+    "own_lead": "Your texts, your photos, your site: if you ever stop, you take it with you."
+  },
+  "credit_labels": {
+    "page": "New page",
+    "translation": "Site translation",
+    "form": "Form",
+    "section": "New section",
+    "design": "Design change",
+    "gallery": "Adding photos",
+    "photo": "Replacing a photo",
+    "menu": "Adding a menu or catalogue item"
+  },
+  "about": {
+    "label": "About",
+    "title": "Who makes <mark>tacto</mark>.",
+    "lead": "A small team in Paris, backed by AI.",
+    "photo_soon": "photo coming soon"
+  },
+  "team": {
+    "audra": {
+      "name": "Audra Rosales",
+      "role": "Founder & marketing strategist",
+      "text": "Founder of Metodas, a freelance marketing collective."
+    },
+    "dev": {
+      "name": "",
+      "role": "Developer & designer",
+      "text": ""
+    },
+    "ai": {
+      "name": "AI",
+      "role": "On the team",
+      "text": "Prepares your requests so they're handled within 24 hours."
+    }
+  },
+  "price_format": "€{n}"
+}

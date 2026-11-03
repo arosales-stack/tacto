@@ -1,0 +1,23 @@
+<section class="card hero hero--short">
+  <p class="mono">{{t.about.label}}</p>
+  <h1 class="hero__title">{{html t.about.title}}</h1>
+  <div class="hero__foot">
+    <p class="lead">{{t.about.lead}}</p>
+  </div>
+</section>
+
+<!-- TEAM: people and photos in site/content.json "team", words in site/lang -->
+<section class="team">
+  {{#each team}}
+  <article class="member member--{{.tone}}">
+    {{#if .ai}}<div class="member__photo member__photo--ai" aria-hidden="true"><span>{{.name}}</span></div>
+    {{else}}{{#if .photo}}<img class="member__photo" src="{{.photo}}" alt="{{.name}}" loading="lazy">
+    {{else}}<div class="member__photo member__photo--soon"><span>{{t.about.photo_soon}}</span></div>{{/if}}{{/if}}
+    <div class="member__text">
+      {{#if .ai}}{{else}}{{#if .name}}<h2>{{.name}}</h2>{{/if}}{{/if}}
+      <p class="member__role">{{.role}}</p>
+      {{#if .text}}<p>{{.text}}</p>{{/if}}
+    </div>
+  </article>
+  {{/each}}
+</section>

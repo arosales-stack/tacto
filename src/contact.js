@@ -8,32 +8,42 @@ import { tooMany, LIMITS as RATE } from './security.js';
 const PREFIX = 'contact:';
 const LIMITS = { name: 80, business: 100, contact: 120, site: 200, message: 1500 };
 const REQUIRED = ['name', 'business', 'contact'];
+// Error messages in the language of the page that sent the form (hidden "lang" field); French by default
+const MESSAGES = {
+  fr: { long: 'Message trop long.', unreadable: 'Formulaire illisible.', rate: 'Trop d’envois depuis votre connexion. Réessayez dans une heure.',
+    field: 'Un des champs est trop long.', missing: 'Il manque votre nom, votre entreprise ou un moyen de vous joindre.', down: 'Envoi impossible pour le moment.' },
+  en: { long: 'Message too long.', unreadable: 'Unreadable form.', rate: 'Too many messages from your connection. Please try again in an hour.',
+    field: 'One of the fields is too long.', missing: 'Please add your name, your business and a way to reach you.', down: 'Sending is unavailable right now.' },
+};
 
 export async function receiveContact(request, env) {
-  if (Number(request.headers.get('Content-Length') ?? 0) > 16_000) return json({ error: 'Message trop long.' }, 413);
+  if (Number(request.headers.get('Content-Length') ?? 0) > 16_000) return json({ error: MESSAGES.fr.long }, 413);
   // The page sends JSON; without JavaScript the browser posts the form itself (then we redirect back)
   const isJson = (request.headers.get('Content-Type') ?? '').includes('application/json');
-  const reply = (data, status) => (isJson ? json(data, status) : redirect(status < 300 ? '/?envoye=1#contact' : '/?erreur=1#contact'));
   let body;
-  try { body = isJson ? await request.json() : Object.fromEntries(await request.formData()); } catch { return reply({ error: 'Formulaire illisible' }, 400); }
+  try { body = isJson ? await request.json() : Object.fromEntries(await request.formData()); } catch { return json({ error: MESSAGES.fr.unreadable }, 400); }
+  const lang = body.lang === 'en' ? 'en' : 'fr';
+  const msg = MESSAGES[lang];
+  const home = lang === 'en' ? '/en/' : '/';
+  const reply = (data, status) => (isJson ? json(data, status) : redirect(`${home}#contact`));
   if (String(body.website ?? '').trim()) return reply({ ok: true }, 200); // honeypot: pretend it worked, store nothing
   if (await tooMany(env, request, 'contact', RATE.contact.max, RATE.contact.window)) {
-    return reply({ error: 'Trop d’envois depuis votre connexion. Réessayez dans une heure.' }, 429);
+    return reply({ error: msg.rate }, 429);
   }
 
   const clean = {};
   for (const [key, max] of Object.entries(LIMITS)) {
     const raw = String(body[key] ?? '');
     const value = (key === 'message' ? raw.replace(/\n{3,}/g, '\n\n') : raw.replace(/\s+/g, ' ')).trim(); // keep line breaks in the message only
-    if (value.length > max) return reply({ error: 'Un des champs est trop long.' }, 400);
+    if (value.length > max) return reply({ error: msg.field }, 400);
     clean[key] = value;
   }
   if (clean.site && !/^https?:\/\//i.test(clean.site)) clean.site = `https://${clean.site}`; // never store a javascript: link
-  if (REQUIRED.some((k) => !clean[k])) return reply({ error: 'Il manque votre nom, votre entreprise ou un moyen de vous joindre.' }, 400);
-  if (!env.CMS_KV) return reply({ error: 'Envoi impossible pour le moment.' }, 500);
+  if (REQUIRED.some((k) => !clean[k])) return reply({ error: msg.missing }, 400);
+  if (!env.CMS_KV) return reply({ error: msg.down }, 500);
 
   const date = new Date().toISOString();
-  await env.CMS_KV.put(`${PREFIX}${date}:${crypto.randomUUID().slice(0, 8)}`, JSON.stringify({ date, ...clean }));
+  await env.CMS_KV.put(`${PREFIX}${date}:${crypto.randomUUID().slice(0, 8)}`, JSON.stringify({ date, lang, ...clean }));
   return reply({ ok: true }, 201);
 }
 

@@ -19,10 +19,11 @@ Live: https://tacto.a-rosales.workers.dev/ — deployed by Cloudflare Workers Bu
 ```
 build.mjs            builds dist/ (the ONLY folder Cloudflare publishes): site pages + site/assets + public/
 site/                agency website source
-  content.json       menu, CTA, projects ("Travaux"), comparison table — data used by the pages
+  content.json       shared data: menu, prices, projects, team, comparison marks
+  lang/              fr.json, en.json — every word of the site, one file per language
   layout.html        page shell: <head>, header, footer. Written once, used by every page
   partials/          header.html, footer.html (+ any reusable block: {{> name}})
-  pages/             one file per page; front matter = title, description, nav. index.html → /, 404.html → unknown URLs
+  pages/             one template per page (no text). index → / and /en/, tarifs → /tarifs and /en/pricing, a-propos, 404
   assets/            site.css (all styles, tokens at the top), site.js (tabs + contact form)
 public/              files for the tools and CMS, copied as-is: app.css, logo.png, cms/, clients/<id>/, outils/
 src/                 Worker code (never published as files)
@@ -37,22 +38,28 @@ src/                 Worker code (never published as files)
 
 ## Agency website
 
-- Same header and footer on every page: edit `site/partials/`, never copy them into pages.
-- New page: add `site/pages/<name>.html` with front matter (`title`, `description`, optional `nav`), it is served at `/<name>`.
-  Add it to `nav` in `site/content.json` if it belongs in the menu.
-- Pricing page `/tarifs` (`site/pages/tarifs.html`): prices in `pricing` in `site/content.json`; the credit grid is read at build time
-  from `src/estimate.js` (same table as the client CMS), so change credits there only.
-- Menu: `nav` in `site/content.json`. On phones the header only shows links with `"phone": true` (+ the CTA); the footer shows all.
-- Projects in "Travaux récents": `work` in `site/content.json` (currently placeholders until real clients are added).
-  `tone` = yellow | lilac | mint | pink.
+- Two languages: French by default at `/` (`/tarifs`, `/a-propos`), English at `/en/` (`/en/pricing`, `/en/about`).
+  The header has a FR/EN switch that goes to the same page in the other language; `hreflang` links are in the head.
+- Page templates (`site/pages/*.html`) contain NO text: every word lives in `site/lang/fr.json` and `site/lang/en.json`
+  (same keys in both). Shared data (menu structure, prices, projects, team, comparison marks) lives in `site/content.json`.
+  Change a sentence → edit the lang files only. New page → template in `site/pages/`, its slug + title/description in
+  `slugs` and `pages` of each lang file, and an entry in `nav` (content.json) + `nav` labels (lang files) if it's in the menu.
+- Same header and footer on every page: `site/partials/`. Desktop shows the links; ≤860px they go in the burger panel.
+- Pricing (`/tarifs`): amounts in `pricing` (content.json), formatted per language (`price_format`). The credit grid is read
+  at build time from `src/estimate.js` (same table as the client CMS); English labels in `credit_labels` (en.json).
+- About (`/a-propos`): `team` in content.json (`photo` path, `tone`, `ai`), names/roles/text in the lang files. Empty photo → "photo à venir".
+- Projects ("Travaux"): `work` in content.json + `work` texts in the lang files. `tone` = yellow | lilac | mint | pink.
 - Styles: only `site/assets/site.css`, tokens in `:root`. No inline styles or inline scripts — the CSP blocks them.
+  `site/assets/site.js` has no text either: messages come from `data-*` attributes rendered from the lang files.
 - The hero must fit the first screen on desktop and phones (`.hero` min-height + title size use svh). Check at
-  1440×900, 1280×720, 1024×768, 820×1180, 390×844, 360×640 after any hero change.
-- Template tags: `{{site.name}}`, `{{#each work}} {{.name}} {{/each}}`, `{{#if .mid}}…{{else}}…{{/if}}`, `{{> header}}`.
+  1440×900, 1280×720, 1024×768, 820×1180, 390×844, 360×640 after any hero change, in both languages.
+- Template tags: `{{t.home.lead}}` (escaped), `{{html t.home.title}}` (lang text with <mark>/<br>), `{{#each work}} {{.name}} {{/each}}`,
+  `{{#if .highlight}}…{{else}}…{{/if}}`, `{{> header}}`. Unknown keys fail the build on purpose.
 
 ## Contact form
 
 `POST /api/contact` (JSON from site.js, or a plain form post without JS). Required: name, business, contact.
+Hidden `lang` field: error messages come back in that language (`MESSAGES` in contact.js).
 Honeypot field `website`. Max 5 sends / IP / hour. Stored in KV as `contact:<date>:<id>`; read at `/outils/messages`.
 No email notification (needs a custom domain + Cloudflare Email Routing).
 
