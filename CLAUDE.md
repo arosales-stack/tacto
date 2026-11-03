@@ -52,7 +52,8 @@ src/                 Worker code (never published as files)
 - Same header and footer on every page: `site/partials/`. Desktop shows the links; ≤860px they go in the burger panel.
 - Pricing (`/tarifs`): amounts in `pricing` (content.json), formatted per language (`price_format`). The credit grid is read
   at build time from `src/estimate.js` (same table as the client CMS); English labels in `credit_labels` (en.json).
-- "Comment ça marche" (4 steps + timeline): `site/partials/steps.html`, words in `steps` (lang files). Used on the homepage
+- "Comment ça marche" (4 steps + timeline): `site/partials/steps.html`, words in `steps` (lang files). Plain on the homepage,
+  coloured only on /tarifs (`[data-page="tarifs"]` rules in site.css). Used on the homepage
   (after the 3 tiles) and on /tarifs (after the prices) — edit it once.
 - About (`/a-propos`): `team` in content.json (`photo` path in `site/assets/team/`, `tone`), names/roles/text in the lang files.
   Empty photo → "photo à venir". Audra's name is written "Audra R." (never the full surname).
