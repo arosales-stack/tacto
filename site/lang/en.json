@@ -215,5 +215,27 @@
       "text": "Prepares your requests so they're handled within 24 hours."
     }
   },
-  "price_format": "€{n}"
+  "price_format": "€{n}",
+  "steps": {
+    "title": "How it <mark>works</mark>",
+    "timeline": "All in 3 business days",
+    "items": [
+      {
+        "title": "A first version, no commitment",
+        "text": "We build a first version of your site with your real content. You see it before you commit."
+      },
+      {
+        "title": "You approve, we polish",
+        "text": "If you like it, you approve and pay for the year. We then make one big round of changes, in a single back-and-forth."
+      },
+      {
+        "title": "Your domain name",
+        "text": "We transfer yours, or buy one for you. If it needs buying, it isn't included (usually €10–20 a year)."
+      },
+      {
+        "title": "Live",
+        "text": "Your site goes live. From then on, your credits take over."
+      }
+    ]
+  }
 }

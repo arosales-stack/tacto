@@ -287,3 +287,14 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .member__role { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
 .member__text p:not(.member__role) { font-size: 16px; line-height: 1.45; }
 @media (max-width: 759px) { .member__photo { aspect-ratio: 1; } }
+
+/* ---------- How it works (partials/steps.html) ---------- */
+.steps .section__head { margin-bottom: clamp(24px, 3vw, 40px); }
+.steps__time { padding: 8px 14px; border-radius: 999px; background: var(--yellow); color: var(--ink); }
+.steps__list { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; grid-template-columns: 1fr; gap: var(--gap); }
+@media (min-width: 640px) { .steps__list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .steps__list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.step { counter-increment: step; background: var(--paper); border-radius: var(--r-lg); padding: var(--pad-sm); display: flex; flex-direction: column; gap: 10px; }
+.step::before { content: counter(step, decimal-leading-zero); font-family: var(--mono); font-size: 12px; letter-spacing: .06em; color: var(--muted); }
+.step__title { font-size: 22px; font-weight: 700; letter-spacing: -.03em; line-height: 1.1; }
+.step p { font-size: 16px; line-height: 1.45; color: var(--ink-2); }

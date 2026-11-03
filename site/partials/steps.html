@@ -1,0 +1,14 @@
+<!-- HOW IT WORKS: shared block, used on the homepage and the pricing page; words in site/lang ("steps") -->
+<section class="card section steps">
+  <div class="section__head">
+    <h2 class="h2">{{html t.steps.title}}</h2>
+    <span class="mono steps__time">{{t.steps.timeline}}</span>
+  </div>
+  <ol class="steps__list">
+    {{#each t.steps.items}}<li class="step">
+      <h3 class="step__title">{{.title}}</h3>
+      <p>{{.text}}</p>
+    </li>
+    {{/each}}
+  </ol>
+</section>

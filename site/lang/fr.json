@@ -217,5 +217,27 @@
     "lead": "Le lien est peut-être ancien ou mal copié.",
     "button": "Retour à l'accueil"
   },
-  "price_format": "{n} €"
+  "price_format": "{n} €",
+  "steps": {
+    "title": "Comment ça <mark>marche</mark>",
+    "timeline": "Le tout en 3 jours ouvrés",
+    "items": [
+      {
+        "title": "Une première version, sans engagement",
+        "text": "On crée une première version de votre site, avec vos vrais contenus. Vous la voyez avant de vous engager."
+      },
+      {
+        "title": "Vous validez, on peaufine",
+        "text": "Si elle vous plaît, vous validez et réglez l'année. On fait ensuite une grande série de modifications, en un aller-retour."
+      },
+      {
+        "title": "Votre nom de domaine",
+        "text": "On transfère le vôtre, ou on l'achète pour vous. S'il faut l'acheter, il n'est pas inclus (en général 10 à 20 € par an)."
+      },
+      {
+        "title": "En ligne",
+        "text": "Votre site est en ligne. Ensuite, vos crédits prennent le relais."
+      }
+    ]
+  }
 }
