@@ -7,11 +7,18 @@
   "nav": [
     {
       "label": "Travaux",
-      "href": "/#travaux"
+      "href": "/#travaux",
+      "phone": false
     },
     {
       "label": "Comparer",
-      "href": "/#comparer"
+      "href": "/#comparer",
+      "phone": false
+    },
+    {
+      "label": "Tarifs",
+      "href": "/tarifs",
+      "phone": true
     }
   ],
   "cta": {
@@ -181,5 +188,10 @@
         ]
       }
     ]
+  },
+  "pricing": {
+    "first_year": "450 €",
+    "yearly": "150 €",
+    "credits": "100"
   }
 }

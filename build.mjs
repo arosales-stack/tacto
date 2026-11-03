@@ -22,6 +22,9 @@ const OUT = 'dist';
 const read = (p) => readFileSync(p, 'utf8');
 const content = JSON.parse(read('site/content.json'));
 content.work_count = String(content.work.length).padStart(2, '0'); // derived: "03 projets"
+// Credit grid on /tarifs comes from the same table the client CMS uses (src/estimate.js), so they never disagree
+const { EXAMPLES } = await import('./src/estimate.js');
+content.credit_grid = EXAMPLES.filter((e) => e.credits != null).sort((a, b) => b.credits - a.credits);
 
 // ---------- tiny template engine ----------
 const escape = (v) => String(v ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
