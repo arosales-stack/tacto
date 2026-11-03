@@ -2,6 +2,8 @@
   "name": "tacto",
   "main": "src/worker.js",
   "compatibility_date": "2026-10-01",
+  // Public domain (zone in this Cloudflare account). The workers.dev address keeps working too.
+  "routes": [{ "pattern": "tactoagency.com", "custom_domain": true }],
   // Runs before every deploy: builds the agency site + copies public/ into dist/ (see build.mjs)
   "build": { "command": "node build.mjs" },
   "assets": {
