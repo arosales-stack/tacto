@@ -271,21 +271,22 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .owner { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
 
 /* ---------- About page ---------- */
+/* White cards; the colour is only the portrait backdrop. Cut-out portraits (transparent PNG/webp) sit on it,
+   the head rising slightly above the backdrop. */
 .team { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
 @media (min-width: 760px) { .team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.member { --bg: var(--pink); background: var(--bg); border-radius: var(--r-xl); padding: var(--pad-sm); display: flex; flex-direction: column; gap: 20px; }
-.member--pink { --bg: var(--pink); }
-.member--lilac { --bg: var(--lilac); }
-.member--mint { --bg: var(--mint); }
-.member--yellow { --bg: var(--yellow); }
-.member__photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: top; border-radius: 20px; background: var(--white); }
-.member__photo--soon { display: grid; place-items: center; }
-.member__photo--soon span { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.member { --tone: var(--pink); background: var(--white); border-radius: var(--r-xl); padding: var(--pad-sm); display: flex; flex-direction: column; gap: 22px; }
+.member--pink { --tone: var(--pink); }
+.member--lilac { --tone: var(--lilac); }
+.member--mint { --tone: var(--mint); }
+.member--yellow { --tone: var(--yellow); }
+.member__portrait { position: relative; aspect-ratio: 1; margin-top: 12%; border-radius: 24px; background: var(--tone); }
+.member__portrait img { position: absolute; left: 50%; bottom: 0; width: 82%; height: auto; max-height: 112%; object-fit: contain; object-position: bottom; transform: translateX(-50%); border-radius: 0 0 24px 24px; }
+.member__soon { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
 .member__text { display: flex; flex-direction: column; gap: 6px; }
 .member__text h2 { font-size: 30px; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
-.member__role { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; }
-.member__text p:not(.member__role) { font-size: 16px; line-height: 1.45; }
-@media (max-width: 759px) { .member__photo { aspect-ratio: 1; } }
+.member__role { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.member__text p:not(.member__role) { font-size: 16px; line-height: 1.45; color: var(--ink-2); }
 
 /* ---------- How it works (partials/steps.html) ---------- */
 /* Plain on the homepage (it already has colour); coloured cards with big numbers on the pricing page only */
