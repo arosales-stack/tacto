@@ -146,7 +146,8 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .section__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px 20px; flex-wrap: wrap; margin-bottom: clamp(16px, 2vw, 24px); }
 
 /* ---------- Work ---------- */
-.work { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: var(--gap); }
+.work { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
+@media (min-width: 980px) { .work { grid-template-columns: repeat(3, minmax(0, 1fr)); } } /* never 2 + 1 orphan */
 .project { --bg: var(--yellow); --stripe: #FFF1B8; --tone: #5C4A00; background: var(--bg); border-radius: var(--r-xl); padding: 24px; display: flex; flex-direction: column; gap: 20px; overflow: hidden; }
 .project--yellow { --bg: var(--yellow); --stripe: #FFF1B8; --tone: #5C4A00; }
 .project--lilac { --bg: var(--lilac); --stripe: #E6E2FF; --tone: #352B80; }
@@ -155,7 +156,7 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .project__top { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
 .project__top .mono { color: var(--tone); }
 .pill { padding: 7px 13px; border-radius: 999px; background: var(--white); font-size: 13px; font-weight: 500; line-height: 1.2; }
-.project__shot { aspect-ratio: 4 / 4.4; background: var(--white); border-radius: 18px; margin: 0 8px -48px; box-shadow: 0 24px 40px -24px rgba(0, 0, 0, .3); display: flex; flex-direction: column; overflow: hidden; transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
+.project__shot { aspect-ratio: 16 / 10.5; /* desktop captures (≈16:9) under a browser bar; phones get a phone frame below */ background: var(--white); border-radius: 18px; margin: 0 8px -48px; box-shadow: 0 24px 40px -24px rgba(0, 0, 0, .3); display: flex; flex-direction: column; overflow: hidden; transition: transform .45s cubic-bezier(.2, .8, .2, 1); }
 .project:hover .project__shot { transform: translateY(-14px) rotate(-1.5deg); }
 .project__bar { display: flex; gap: 5px; padding: 12px 14px; border-bottom: 1px solid #EEE; }
 .project__bar i { width: 8px; height: 8px; border-radius: 50%; background: #E6E2DA; }

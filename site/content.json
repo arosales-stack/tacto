@@ -41,7 +41,7 @@
       "name": "Metodas",
       "tone": "yellow",
       "shot_mobile": "/assets/work/metodas-mobile.webp",
-      "shot_desktop": ""
+      "shot_desktop": "/assets/work/metodas-desktop.webp"
     },
     {
       "id": "tableandco",
@@ -49,7 +49,7 @@
       "name": "Table & Co",
       "tone": "lilac",
       "shot_mobile": "/assets/work/tableandco-mobile.webp",
-      "shot_desktop": ""
+      "shot_desktop": "/assets/work/tableandco-desktop.webp"
     },
     {
       "id": "revo",
@@ -57,7 +57,7 @@
       "name": "Revo",
       "tone": "mint",
       "shot_mobile": "/assets/work/revo-mobile.webp",
-      "shot_desktop": ""
+      "shot_desktop": "/assets/work/revo-desktop.webp"
     }
   ],
   "team": [
