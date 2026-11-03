@@ -40,6 +40,9 @@ src/                 Worker code (never published as files)
 - Same header and footer on every page: edit `site/partials/`, never copy them into pages.
 - New page: add `site/pages/<name>.html` with front matter (`title`, `description`, optional `nav`), it is served at `/<name>`.
   Add it to `nav` in `site/content.json` if it belongs in the menu.
+- Pricing page `/tarifs` (`site/pages/tarifs.html`): prices in `pricing` in `site/content.json`; the credit grid is read at build time
+  from `src/estimate.js` (same table as the client CMS), so change credits there only.
+- Menu: `nav` in `site/content.json`. On phones the header only shows links with `"phone": true` (+ the CTA); the footer shows all.
 - Projects in "Travaux récents": `work` in `site/content.json` (currently placeholders until real clients are added).
   `tone` = yellow | lilac | mint | pink.
 - Styles: only `site/assets/site.css`, tokens in `:root`. No inline styles or inline scripts — the CSP blocks them.
