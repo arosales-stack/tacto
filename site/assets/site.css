@@ -159,8 +159,13 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .project:hover .project__shot { transform: translateY(-14px) rotate(-1.5deg); }
 .project__bar { display: flex; gap: 5px; padding: 12px 14px; border-bottom: 1px solid #EEE; }
 .project__bar i { width: 8px; height: 8px; border-radius: 50%; background: #E6E2DA; }
-.project__img { flex: 1; background: repeating-linear-gradient(135deg, var(--stripe) 0 10px, var(--white) 10px 20px); display: grid; place-items: center; }
-.project__img span { font-family: var(--mono); font-size: 11px; background: var(--white); padding: 6px 10px; border-radius: 999px; color: #8A857C; }
+.project__img { flex: 1; min-height: 0; display: block; background: var(--stripe); }
+.project__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+/* Phones: the screenshots are phone captures, so the frame becomes a phone (tall, no browser bar) */
+@media (max-width: 759px) {
+  .project__shot { aspect-ratio: 9 / 17; margin: 0 4px -40px; }
+  .project__bar { display: none; }
+}
 .project__name { position: relative; background: var(--bg); margin: 0 -24px -24px; padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 4px; }
 .project__name h3 { font-size: 30px; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
 .project__name p { font-size: 15px; color: var(--tone); }

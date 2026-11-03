@@ -53,7 +53,7 @@
       <div class="project__top"><span class="mono">{{.number}}</span><span class="pill">{{.tag}}</span></div>
       <div class="project__shot" aria-hidden="true">
         <div class="project__bar"><i></i><i></i><i></i></div>
-        <div class="project__img"><span>{{t.home.screenshot}} · {{.shot}}</span></div>
+        <picture class="project__img">{{#if .shot_desktop}}<source media="(min-width: 760px)" srcset="{{.shot_desktop}}">{{/if}}<img src="{{.shot_mobile}}" alt="" loading="lazy"></picture>
       </div>
       <div class="project__name"><h3>{{.name}}</h3><p>{{.kind}}</p></div>
     </article>

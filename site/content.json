@@ -39,22 +39,25 @@
       "id": "metodas",
       "number": "01",
       "name": "Metodas",
-      "shot": "metodas",
-      "tone": "yellow"
+      "tone": "yellow",
+      "shot_mobile": "/assets/work/metodas-mobile.webp",
+      "shot_desktop": ""
     },
     {
       "id": "tableandco",
       "number": "02",
       "name": "Table & Co",
-      "shot": "table & co",
-      "tone": "lilac"
+      "tone": "lilac",
+      "shot_mobile": "/assets/work/tableandco-mobile.webp",
+      "shot_desktop": ""
     },
     {
-      "id": "ayudave",
+      "id": "revo",
       "number": "03",
-      "name": "Ayudave",
-      "shot": "ayudave",
-      "tone": "mint"
+      "name": "Revo",
+      "tone": "mint",
+      "shot_mobile": "/assets/work/revo-mobile.webp",
+      "shot_desktop": ""
     }
   ],
   "team": [
