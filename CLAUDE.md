@@ -10,9 +10,14 @@ Worker (`tacto`) that serves three things:
 | Team tools | `/login`, `/outils` (photo tool), `/outils/messages`, `POST /api/images/edit` | Tacto team (`TOOLS_PASSWORD`) |
 | Client CMS | `/<client>` e.g. `/gutea` | each client, own password |
 
-Live: https://tacto.a-rosales.workers.dev/ — deployed by Cloudflare Workers Builds on every push to `main`
+Live: https://tacto.a-rosales.workers.dev/ (domain: https://tactoagency.com once attached to the Worker in Cloudflare) — deployed by Cloudflare Workers Builds on every push to `main`
 (the build runs `node build.mjs`, see `wrangler.jsonc`). Check a deploy with
 `gh api repos/arosales-stack/tacto/commits/<sha>/check-runs`.
+
+## Branches
+
+- `main` = the live site: every push to `main` deploys to production. Never push to `main` without Audra's go.
+- `dev` = work in progress: commit and push changes to `dev`, show them, then merge `dev` → `main` when she approves.
 
 ## Folder map
 
@@ -49,7 +54,8 @@ src/                 Worker code (never published as files)
   at build time from `src/estimate.js` (same table as the client CMS); English labels in `credit_labels` (en.json).
 - "Comment ça marche" (4 steps + timeline): `site/partials/steps.html`, words in `steps` (lang files). Used on the homepage
   (after the 3 tiles) and on /tarifs (after the prices) — edit it once.
-- About (`/a-propos`): `team` in content.json (`photo` path, `tone`, `ai`), names/roles/text in the lang files. Empty photo → "photo à venir".
+- About (`/a-propos`): `team` in content.json (`photo` path in `site/assets/team/`, `tone`), names/roles/text in the lang files.
+  Empty photo → "photo à venir". Audra's name is written "Audra R." (never the full surname).
 - Projects ("Travaux"): `work` in content.json (`shot_mobile` phone capture, optional `shot_desktop` used ≥760px) + `work` texts in the lang files.
   Captures live in `site/assets/work/` as webp, 720px wide. `tone` = yellow | lilac | mint | pink.
 - Styles: only `site/assets/site.css`, tokens in `:root`. No inline styles or inline scripts — the CSP blocks them.

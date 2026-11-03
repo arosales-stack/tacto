@@ -200,17 +200,17 @@
   },
   "team": {
     "audra": {
-      "name": "Audra Rosales",
+      "name": "Audra R.",
       "role": "Founder & marketing strategist",
       "text": "Founder of Metodas, a freelance marketing collective."
     },
     "dev": {
-      "name": "",
+      "name": "Matthieu",
       "role": "Developer & designer",
       "text": ""
     },
     "ai": {
-      "name": "AI",
+      "name": "AI Agent",
       "role": "On the team",
       "text": "Prepares your requests so they're handled within 24 hours."
     }

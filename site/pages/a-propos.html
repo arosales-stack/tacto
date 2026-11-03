@@ -10,11 +10,10 @@
 <section class="team">
   {{#each team}}
   <article class="member member--{{.tone}}">
-    {{#if .ai}}<div class="member__photo member__photo--ai" aria-hidden="true"><span>{{.name}}</span></div>
-    {{else}}{{#if .photo}}<img class="member__photo" src="{{.photo}}" alt="{{.name}}" loading="lazy">
-    {{else}}<div class="member__photo member__photo--soon"><span>{{t.about.photo_soon}}</span></div>{{/if}}{{/if}}
+    {{#if .photo}}<img class="member__photo" src="{{.photo}}" alt="{{.name}}" width="800" height="1030" loading="lazy">
+    {{else}}<div class="member__photo member__photo--soon"><span>{{t.about.photo_soon}}</span></div>{{/if}}
     <div class="member__text">
-      {{#if .ai}}{{else}}{{#if .name}}<h2>{{.name}}</h2>{{/if}}{{/if}}
+      <h2>{{.name}}</h2>
       <p class="member__role">{{.role}}</p>
       {{#if .text}}<p>{{.text}}</p>{{/if}}
     </div>

@@ -196,17 +196,17 @@
   },
   "team": {
     "audra": {
-      "name": "Audra Rosales",
+      "name": "Audra R.",
       "role": "Fondatrice & stratège marketing",
       "text": "Fondatrice de Metodas, collectif marketing freelance."
     },
     "dev": {
-      "name": "",
+      "name": "Matthieu",
       "role": "Développeur & designer",
       "text": ""
     },
     "ai": {
-      "name": "L'IA",
+      "name": "Agent IA",
       "role": "Dans l'équipe",
       "text": "Prépare vos demandes pour qu'elles soient traitées en moins de 24 h."
     }

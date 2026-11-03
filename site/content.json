@@ -3,7 +3,7 @@
     "name": "tacto",
     "city": "Paris",
     "year": "2026",
-    "url": "https://tacto.a-rosales.workers.dev"
+    "url": "https://tactoagency.com"
   },
   "nav": [
     {
@@ -63,21 +63,18 @@
   "team": [
     {
       "id": "audra",
-      "photo": "",
-      "tone": "pink",
-      "ai": false
+      "photo": "/assets/team/audra.webp",
+      "tone": "pink"
     },
     {
       "id": "dev",
-      "photo": "",
-      "tone": "lilac",
-      "ai": false
+      "photo": "/assets/team/matthieu.webp",
+      "tone": "lilac"
     },
     {
       "id": "ai",
-      "photo": "",
-      "tone": "mint",
-      "ai": true
+      "photo": "/assets/team/agent.webp",
+      "tone": "mint"
     }
   ],
   "compare": {
