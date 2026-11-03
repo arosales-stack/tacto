@@ -18,6 +18,8 @@ Live: https://tacto.a-rosales.workers.dev/ (domain: https://tactoagency.com once
 
 - `main` = the live site: every push to `main` deploys to production. Never push to `main` without Audra's go.
 - `dev` = work in progress: commit and push changes to `dev`, show them, then merge `dev` → `main` when she approves.
+  Every push to `dev` builds a Preview at https://dev-tacto.a-rosales.workers.dev (give Audra this link after each dev push).
+  Previews use the `previews` block in wrangler.jsonc, NOT production settings: no KV there, so contact form/CMS only work in production.
 
 ## Folder map
 
