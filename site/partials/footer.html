@@ -1,9 +1,14 @@
 <footer class="foot">
-  <span class="mono">{{site.name}} · {{site.city}}</span>
+  <div class="foot__brand">
+    <a class="wordmark" href="{{home}}" aria-label="{{t.home_label}}">{{site.name}}<span class="dot"></span></a>
+    <p class="mono">{{t.home.label}} · {{site.city}}</p>
+  </div>
   <nav class="foot__nav" aria-label="{{t.footer_label}}">
-    {{#each nav}}<a class="mono" href="{{.href}}">{{.label}}</a>
-    {{/each}}<a class="mono" href="{{cta.href}}">{{t.contact_link}}</a>
-    <a class="mono" href="{{switch.href}}" hreflang="{{switch.lang}}" lang="{{switch.lang}}">{{switch.name}}</a>
+    {{#each nav}}<a href="{{.href}}">{{.label}}</a>
+    {{/each}}<a href="{{cta.href}}">{{t.contact_link}}</a>
   </nav>
-  <span class="mono">© {{site.year}}</span>
+  <div class="foot__end">
+    <a class="lang-switch" href="{{switch.href}}" hreflang="{{switch.lang}}" lang="{{switch.lang}}" aria-label="{{switch.name}}">{{switch.label}}</a>
+    <span class="mono">© {{site.year}}</span>
+  </div>
 </footer>
