@@ -28,7 +28,8 @@
   "pricing": {
     "first_year": 450,
     "yearly": 150,
-    "credits": "100"
+    "credits": "40",
+    "max_pages": "5"
   },
   "work": [
     {
@@ -63,23 +64,23 @@
         "id": "wordpress",
         "label": "WordPress",
         "mid": [
-          false,
-          false,
+          true,
+          true,
           false,
           true,
           false,
-          false
+          true
         ]
       },
       {
         "id": "wix",
         "label": "Wix",
         "mid": [
-          false,
+          true,
           true,
           false,
           false,
-          false,
+          true,
           true
         ]
       },

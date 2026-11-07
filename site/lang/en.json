@@ -26,7 +26,7 @@
     },
     "tarifs": {
       "title": "Pricing — tacto",
-      "description": "€450 the first year, then €150 per year. Custom website, hosting, edits and 100 credits a year included. The site stays yours."
+      "description": "€450 the first year, then €150 per year. Custom website up to 5 pages, hosting, edits and 40 credits a year included. The site stays yours."
     }
   },
   "home": {
@@ -40,7 +40,7 @@
     "edit_title": "Edit it yourself.",
     "edit_text": "Texts, prices, hours, news: as often as you like, free. The layout never breaks.",
     "credits_title": "Credits per year.",
-    "credits_text": "New page, photos, a form: just ask, it's done within 24 hours.",
+    "credits_text": "Photos, a new section, a form: small changes within 24 business hours, a clear deadline for the rest.",
     "chips": [
       {
         "text": "Mobile",
@@ -95,41 +95,41 @@
       "Editing your texts",
       "Bigger changes",
       "Your site",
-      "Speed",
+      "Maintenance",
       "Price"
     ],
     "us": [
       "Custom-made, built for you",
       "Simple editor, protected layout",
-      "Done for you within 24 hours",
-      "Yours: take it with you whenever you want",
-      "Instant, even on 4G",
+      "Done for you, with your credits",
+      "Code and content are yours",
+      "None on your side",
       "One yearly price, all included"
     ],
     "rivals": {
       "wordpress": [
-        "Bought theme, adapted as well as possible",
-        "Complex back office, easy to break",
-        "Do it yourself or pay extra",
-        "Yours, but yours to manage",
-        "Often slow on mobile",
-        "Hosting + theme + plugins + developer"
+        "Theme to adapt, or a developer",
+        "Full back office to learn",
+        "Yourself, or a paid provider",
+        "Yours, hosting and backups to manage",
+        "Updates and plugins to keep up with",
+        "Hosting, theme, plugins and provider"
       ],
       "wix": [
-        "Template seen a thousand times",
-        "Drag and drop: everything moves",
+        "Templates you customise yourself",
+        "Visual editor, everything can move",
         "Do it yourself",
-        "You can't take it with you: it stays on Wix",
-        "Heavy on mobile",
-        "Monthly subscription + add-ons"
+        "Stays hosted on Wix",
+        "Handled by Wix",
+        "Monthly subscription, by plan"
       ],
       "framer": [
-        "Beautiful, but you build it yourself",
-        "Powerful but complex editor",
-        "Do it yourself or hire a freelancer",
-        "Your site can't be exported",
-        "Fast",
-        "Monthly subscription, per site"
+        "Very flexible, you design it yourself",
+        "Design tool, more technical",
+        "Yourself, or a freelancer",
+        "No code export: stays on Framer",
+        "Handled by Framer",
+        "Subscription per site"
       ]
     }
   },
@@ -156,8 +156,9 @@
     "plans_label": "The two prices",
     "first_label": "First year",
     "first": [
-      "Your custom website, designed for your business",
+      "Your custom website, up to 5 pages",
       "Works on mobile, tablet and computer",
+      "One round of changes at delivery",
       "Hosting, security and updates",
       "Your own space to edit texts, prices and hours, as often as you like"
     ],
@@ -170,11 +171,12 @@
     ],
     "next_credits": "new credits every year",
     "credits_title": "Credits",
-    "credits_lead": "Text changes are unlimited and free. For anything else, send a request from your space: you instantly see how many credits it takes, and it's handled within 24 hours.",
+    "credits_lead": "Text changes are unlimited and free. For anything else, send a request from your space and you instantly see how many credits it takes. Small changes are done within 24 business hours; for bigger ones, we give you a clear deadline.",
     "credits_unit": "credits",
     "credits_note": "Online sales, payments, apps…: these are new projects, quoted separately.",
     "own_title": "The site is <mark>yours</mark>.",
-    "own_lead": "Your texts, your photos, your site: if you ever stop, you take it with you."
+    "own_lead": "The site's code, your texts and your photos belong to you. If you stop, we hand over all the site's files, ready to be hosted elsewhere. Hosting and your editing space end at the end of the paid year.",
+    "scope_note": "Beyond 5 pages, or for specific features (online sales, booking, member area…), we quote separately."
   },
   "credit_labels": {
     "page": "New page",
@@ -192,12 +194,12 @@
     "timeline": "All in 3 business days",
     "items": [
       {
-        "title": "A first version, no commitment",
-        "text": "We build a first version of your site with your real content. You see it before you commit."
+        "title": "A homepage, no commitment",
+        "text": "We design your site's homepage with your real content. You see it before you commit."
       },
       {
-        "title": "You approve, we polish",
-        "text": "If you like it, you approve and pay for the year. We then make one big round of changes, in a single back-and-forth."
+        "title": "You approve, we build",
+        "text": "If you like it, you approve and pay for the year. We build the rest of the site (up to 5 pages), then one round of changes in a single back-and-forth."
       },
       {
         "title": "Your domain name",

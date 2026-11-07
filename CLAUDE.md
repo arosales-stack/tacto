@@ -52,6 +52,7 @@ src/                 Worker code (never published as files)
   Change a sentence → edit the lang files only. New page → template in `site/pages/`, its slug + title/description in
   `slugs` and `pages` of each lang file, and an entry in `nav` (content.json) + `nav` labels (lang files) if it's in the menu.
 - Same header and footer on every page: `site/partials/`. Desktop shows the links; ≤860px they go in the burger panel.
+- Offer: 450 € first year then 150 €/yr, 40 credits/yr (renewals too), max 5 pages + one revision round, free preview = homepage only.
 - Pricing (`/tarifs`): amounts in `pricing` (content.json), formatted per language (`price_format`). The credit grid is read
   at build time from `src/estimate.js` (same table as the client CMS); English labels in `credit_labels` (en.json).
 - "Comment ça marche" (4 steps + timeline): `site/partials/steps.html`, words in `steps` (lang files). Plain on the homepage,
@@ -90,7 +91,7 @@ only adds `OPENAI_API_KEY` and streams to OpenAI `/v1/images/edits`. Files: `pub
 - Text edits: validated server-side against the field rules, then committed to the client's `content/site.json` via the
   GitHub Contents API (`GITHUB_TOKEN`, fine-grained, Contents read/write on client repos). The client's Worker rebuilds.
 - Requests & credits: KV `<id>:requests`. Estimates in `src/estimate.js`: fixed table; unknown requests = "À estimer"
-  (credits null, nothing reserved); shop/payment/app etc. = "Hors forfait – devis séparé". Requests handled < 24 h.
+  (credits null, nothing reserved); shop/payment/app etc. = "Hors forfait – devis séparé". Small changes within 24 business hours; bigger ones get a specific deadline.
 
 ## Security rules (keep them)
 
