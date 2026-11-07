@@ -166,11 +166,12 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 @media (max-width: 759px) {
   /* Phones: the capture sits in a small ink phone frame (Tacto's ink, rounded like the cards), centred,
      so it reads as "a picture of another site" and stays separate from Tacto's own content */
-  .project__shot { position: relative; width: 62%; align-self: center; aspect-ratio: 9 / 16; margin: 4px 0 -36px;
+  .project__shot { position: relative; width: 62%; align-self: center; aspect-ratio: 9 / 16; margin: 4px 0 0; /* whole phone visible: no overlap with the name below */
     border: 6px solid var(--ink); border-radius: 30px; background: var(--ink); box-shadow: 0 22px 36px -22px rgba(0, 0, 0, .45); }
   .project__bar { display: none; }
   .project__img { border-radius: 24px; overflow: hidden; }
   .project:hover .project__shot { transform: none; }
+  .project__name { background: none; } /* otherwise it clips the phone's shadow with a straight edge */
 }
 .project__name { position: relative; background: var(--bg); margin: 0 -24px -24px; padding: 20px 24px 24px; display: flex; flex-direction: column; gap: 4px; }
 .project__name h3 { font-size: 30px; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
