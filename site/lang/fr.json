@@ -5,7 +5,6 @@
   "slugs": {
     "index": "",
     "tarifs": "tarifs",
-    "a-propos": "a-propos",
     "404": "404"
   },
   "skip": "Aller au contenu",
@@ -17,8 +16,7 @@
   "nav": {
     "travaux": "Travaux",
     "comparer": "Comparer",
-    "tarifs": "Tarifs",
-    "apropos": "À propos"
+    "tarifs": "Tarifs"
   },
   "cta": "Démarrer",
   "contact_link": "Contact",
@@ -30,10 +28,6 @@
     "tarifs": {
       "title": "Tarifs — tacto",
       "description": "450 € la première année, puis 150 € par an. Site sur mesure, hébergement, modifications et 100 crédits par an inclus. Le site reste à vous."
-    },
-    "a-propos": {
-      "title": "À propos — tacto",
-      "description": "L'équipe tacto : une stratège marketing, un développeur designer et l'IA."
     },
     "404": {
       "title": "Page introuvable — tacto",
@@ -188,29 +182,6 @@
     "own_lead": "Vos textes, vos photos, votre site : si un jour vous arrêtez, vous partez avec."
   },
   "credit_labels": {},
-  "about": {
-    "label": "À propos",
-    "title": "Qui fait <mark>tacto</mark>.",
-    "lead": "Une petite équipe à Paris, épaulée par l'IA.",
-    "photo_soon": "photo à venir"
-  },
-  "team": {
-    "audra": {
-      "name": "Audra R.",
-      "role": "Fondatrice & stratège marketing",
-      "text": "Fondatrice de Metodas, collectif marketing freelance."
-    },
-    "dev": {
-      "name": "Matthieu",
-      "role": "Développeur & designer",
-      "text": ""
-    },
-    "ai": {
-      "name": "Agent IA",
-      "role": "Dans l'équipe",
-      "text": "Prépare vos demandes pour qu'elles soient traitées en moins de 24 h."
-    }
-  },
   "notfound": {
     "label": "Erreur 404",
     "title": "Cette page n'existe <mark>pas</mark>.",
@@ -239,5 +210,29 @@
         "text": "Votre site est en ligne. Ensuite, vos crédits prennent le relais."
       }
     ]
+  },
+  "reviews": {
+    "title": "Ils en <mark>parlent</mark>",
+    "label": "Avis clients",
+    "items": {
+      "metodas": {
+        "topic": "Qualité / prix",
+        "quote": "On voulait un site au niveau d'une agence, sans le budget d'une agence. On a eu un design sur mesure pour le prix d'un abonnement.",
+        "name": "[Prénom N.]",
+        "company": "Metodas"
+      },
+      "tableandco": {
+        "topic": "Temps gagné",
+        "quote": "Je change nos prix et nos collections moi-même, en deux minutes. Avant, chaque modification prenait une semaine d'allers-retours.",
+        "name": "[Prénom N.]",
+        "company": "Table & Co"
+      },
+      "revo": {
+        "topic": "Rapidité",
+        "quote": "Le site était en ligne en trois jours. Et quand il nous faut une nouvelle page, c'est fait le lendemain.",
+        "name": "[Prénom N.]",
+        "company": "Revo"
+      }
+    }
   }
 }

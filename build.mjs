@@ -1,11 +1,11 @@
 // Assembles everything the Worker serves into dist/ (the only folder Cloudflare publishes).
 //
-//   site/content.json   data shared by every language: menu structure, prices, projects, team, comparison marks
+//   site/content.json   data shared by every language: menu structure, prices, projects, reviews, comparison marks
 //   site/lang/<xx>.json all the words, one file per language (fr = default at /, en at /en/)
 //   site/layout.html    page shell: head, header, footer — written once for every page and language
 //   site/partials/      blocks reused across pages: {{> name}}
 //   site/pages/         one template per page, no text inside (it comes from site/lang): index.html → /,
-//                       tarifs.html → /tarifs and /en/pricing, a-propos.html → /a-propos and /en/about, 404.html
+//                       tarifs.html → /tarifs and /en/pricing, 404.html
 //   site/assets/        agency CSS/JS/images → /assets/
 //   public/             tool + client CMS files (app.css, logo, /cms, /clients, /outils) → copied as-is
 //
@@ -111,7 +111,7 @@ function dataFor(lang, page) {
     },
     work: content.work.map((w) => ({ ...w, ...t.work[w.id] })),
     work_count: String(content.work.length).padStart(2, '0'),
-    team: content.team.map((m) => ({ ...m, ...t.team[m.id] })),
+    reviews: content.reviews.map((r) => ({ ...r, ...t.reviews.items[r.id] })),
     compare: {
       first: content.compare.rivals[0].label,
       us: c.labels.map((label, i) => ({ label, text: c.us[i] })),

@@ -19,10 +19,6 @@
     {
       "key": "tarifs",
       "page": "tarifs"
-    },
-    {
-      "key": "apropos",
-      "page": "a-propos"
     }
   ],
   "cta": {
@@ -58,23 +54,6 @@
       "tone": "mint",
       "shot_mobile": "/assets/work/revo-mobile.webp",
       "shot_desktop": "/assets/work/revo-desktop.webp"
-    }
-  ],
-  "team": [
-    {
-      "id": "audra",
-      "photo": "/assets/team/audra.webp",
-      "tone": "pink"
-    },
-    {
-      "id": "dev",
-      "photo": "/assets/team/matthieu.webp",
-      "tone": "lilac"
-    },
-    {
-      "id": "ai",
-      "photo": "/assets/team/agent.webp",
-      "tone": "mint"
     }
   ],
   "compare": {
@@ -117,5 +96,19 @@
         ]
       }
     ]
-  }
+  },
+  "reviews": [
+    {
+      "id": "metodas",
+      "tone": "yellow"
+    },
+    {
+      "id": "tableandco",
+      "tone": "lilac"
+    },
+    {
+      "id": "revo",
+      "tone": "mint"
+    }
+  ]
 }

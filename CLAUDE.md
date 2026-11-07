@@ -26,11 +26,11 @@ Live: https://tacto.a-rosales.workers.dev/ (domain: https://tactoagency.com once
 ```
 build.mjs            builds dist/ (the ONLY folder Cloudflare publishes): site pages + site/assets + public/
 site/                agency website source
-  content.json       shared data: menu, prices, projects, team, comparison marks
+  content.json       shared data: menu, prices, projects, reviews, comparison marks
   lang/              fr.json, en.json — every word of the site, one file per language
   layout.html        page shell: <head>, header, footer. Written once, used by every page
   partials/          header.html, footer.html (+ any reusable block: {{> name}})
-  pages/             one template per page (no text). index → / and /en/, tarifs → /tarifs and /en/pricing, a-propos, 404
+  pages/             one template per page (no text). index → / and /en/, tarifs → /tarifs and /en/pricing, 404
   assets/            site.css (all styles, tokens at the top), site.js (tabs + contact form)
 public/              files for the tools and CMS, copied as-is: app.css, logo.png, cms/, clients/<id>/, outils/
 src/                 Worker code (never published as files)
@@ -45,10 +45,10 @@ src/                 Worker code (never published as files)
 
 ## Agency website
 
-- Two languages: French by default at `/` (`/tarifs`, `/a-propos`), English at `/en/` (`/en/pricing`, `/en/about`).
+- Two languages: French by default at `/` (`/tarifs`), English at `/en/` (`/en/pricing`).
   The header has a FR/EN switch that goes to the same page in the other language; `hreflang` links are in the head.
 - Page templates (`site/pages/*.html`) contain NO text: every word lives in `site/lang/fr.json` and `site/lang/en.json`
-  (same keys in both). Shared data (menu structure, prices, projects, team, comparison marks) lives in `site/content.json`.
+  (same keys in both). Shared data (menu structure, prices, projects, reviews, comparison marks) lives in `site/content.json`.
   Change a sentence → edit the lang files only. New page → template in `site/pages/`, its slug + title/description in
   `slugs` and `pages` of each lang file, and an entry in `nav` (content.json) + `nav` labels (lang files) if it's in the menu.
 - Same header and footer on every page: `site/partials/`. Desktop shows the links; ≤860px they go in the burger panel.
@@ -57,8 +57,8 @@ src/                 Worker code (never published as files)
 - "Comment ça marche" (4 steps + timeline): `site/partials/steps.html`, words in `steps` (lang files). Plain on the homepage,
   coloured only on /tarifs (`[data-page="tarifs"]` rules in site.css). Used on the homepage
   (after the 3 tiles) and on /tarifs (after the prices) — edit it once.
-- About (`/a-propos`): `team` in content.json (`photo` path in `site/assets/team/`, `tone`), names/roles/text in the lang files.
-  Empty photo → "photo à venir". Audra's name is written "Audra R." (never the full surname).
+- Reviews (homepage, after "Travaux"): `reviews` in content.json (id + tone matching the project), words in `reviews` (lang files).
+  Quotes come from Audra's own companies (approved by her). Names: first name + last initial.
 - Projects ("Travaux"): `work` in content.json (`shot_mobile` phone capture, optional `shot_desktop` used ≥760px) + `work` texts in the lang files.
   Captures live in `site/assets/work/` as webp, 720px wide. `tone` = yellow | lilac | mint | pink.
 - Styles: only `site/assets/site.css`, tokens in `:root`. No inline styles or inline scripts — the CSP blocks them.

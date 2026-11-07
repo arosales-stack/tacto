@@ -63,6 +63,22 @@
   </div>
 </section>
 
+<!-- REVIEWS: one per project; tone dot matches the project card colour. Words in site/lang ("reviews") -->
+<section class="card section reviews" aria-label="{{t.reviews.label}}">
+  <div class="section__head">
+    <h2 class="h2">{{html t.reviews.title}}</h2>
+  </div>
+  <div class="reviews__grid">
+    {{#each reviews}}
+    <figure class="review review--{{.tone}}">
+      <span class="review__topic">{{.topic}}</span>
+      <blockquote class="review__quote">{{.quote}}</blockquote>
+      <figcaption class="review__who"><strong>{{.name}}</strong><span class="mono">{{.company}}</span></figcaption>
+    </figure>
+    {{/each}}
+  </div>
+</section>
+
 <!-- COMPARISON: every rival is rendered here; site.js only switches the visible one -->
 <section class="card section compare" id="comparer">
   <div class="compare__head">

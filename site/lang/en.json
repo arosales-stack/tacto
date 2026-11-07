@@ -4,8 +4,7 @@
   "switch_label": "English version",
   "slugs": {
     "index": "",
-    "tarifs": "pricing",
-    "a-propos": "about"
+    "tarifs": "pricing"
   },
   "skip": "Skip to content",
   "menu": "Menu",
@@ -16,8 +15,7 @@
   "nav": {
     "travaux": "Work",
     "comparer": "Compare",
-    "tarifs": "Pricing",
-    "apropos": "About"
+    "tarifs": "Pricing"
   },
   "cta": "Get started",
   "contact_link": "Contact",
@@ -29,10 +27,6 @@
     "tarifs": {
       "title": "Pricing — tacto",
       "description": "€450 the first year, then €150 per year. Custom website, hosting, edits and 100 credits a year included. The site stays yours."
-    },
-    "a-propos": {
-      "title": "About — tacto",
-      "description": "The tacto team: a marketing strategist, a developer-designer and AI."
     }
   },
   "home": {
@@ -192,29 +186,6 @@
     "photo": "Replacing a photo",
     "menu": "Adding a menu or catalogue item"
   },
-  "about": {
-    "label": "About",
-    "title": "Who makes <mark>tacto</mark>.",
-    "lead": "A small team in Paris, backed by AI.",
-    "photo_soon": "photo coming soon"
-  },
-  "team": {
-    "audra": {
-      "name": "Audra R.",
-      "role": "Founder & marketing strategist",
-      "text": "Founder of Metodas, a freelance marketing collective."
-    },
-    "dev": {
-      "name": "Matthieu",
-      "role": "Developer & designer",
-      "text": ""
-    },
-    "ai": {
-      "name": "AI Agent",
-      "role": "On the team",
-      "text": "Prepares your requests so they're handled within 24 hours."
-    }
-  },
   "price_format": "€{n}",
   "steps": {
     "title": "How it <mark>works</mark>",
@@ -237,5 +208,29 @@
         "text": "Your site goes live. From then on, your credits take over."
       }
     ]
+  },
+  "reviews": {
+    "title": "In their <mark>words</mark>",
+    "label": "Client reviews",
+    "items": {
+      "metodas": {
+        "topic": "Quality / price",
+        "quote": "We wanted an agency-level site without an agency budget. We got a custom design for the price of a subscription.",
+        "name": "[First name L.]",
+        "company": "Metodas"
+      },
+      "tableandco": {
+        "topic": "Time saved",
+        "quote": "I update our prices and collections myself in two minutes. Before, every change took a week of back-and-forth.",
+        "name": "[First name L.]",
+        "company": "Table & Co"
+      },
+      "revo": {
+        "topic": "Speed",
+        "quote": "The site was live in three days. And when we need a new page, it's done the next day.",
+        "name": "[First name L.]",
+        "company": "Revo"
+      }
+    }
   }
 }

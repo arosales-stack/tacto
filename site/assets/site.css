@@ -270,23 +270,22 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 
 .owner { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
 
-/* ---------- About page ---------- */
-/* White cards; the colour is only the portrait backdrop. Cut-out portraits (transparent PNG/webp) sit on it,
-   the head rising slightly above the backdrop. */
-.team { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
-@media (min-width: 760px) { .team { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-.member { --tone: var(--pink); background: var(--white); border-radius: var(--r-xl); padding: var(--pad-sm); display: flex; flex-direction: column; gap: 22px; }
-.member--pink { --tone: var(--pink); }
-.member--lilac { --tone: var(--lilac); }
-.member--mint { --tone: var(--mint); }
-.member--yellow { --tone: var(--yellow); }
-.member__portrait { position: relative; aspect-ratio: 1; margin-top: 12%; border-radius: 24px; background: var(--tone); }
-.member__portrait img { position: absolute; left: 50%; bottom: 0; width: 82%; height: auto; max-height: 112%; object-fit: contain; object-position: bottom; transform: translateX(-50%); border-radius: 0 0 24px 24px; }
-.member__soon { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--ink-2); }
-.member__text { display: flex; flex-direction: column; gap: 6px; }
-.member__text h2 { font-size: 30px; font-weight: 700; letter-spacing: -.04em; line-height: 1; }
-.member__role { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
-.member__text p:not(.member__role) { font-size: 16px; line-height: 1.45; color: var(--ink-2); }
+/* ---------- Reviews (homepage) ---------- */
+/* Calm on purpose: white card, beige quote cards like "Comment ça marche"; the only colour is a small dot
+   in each project's tone, so a review visually links to its project card above. */
+.reviews__grid { display: grid; grid-template-columns: 1fr; gap: var(--gap); }
+@media (min-width: 980px) { .reviews__grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.review { --tone: var(--yellow); margin: 0; background: var(--paper); border-radius: var(--r-lg); padding: var(--pad-sm); display: flex; flex-direction: column; gap: 20px; }
+.review--yellow { --tone: var(--yellow); }
+.review--lilac { --tone: var(--lilac); }
+.review--mint { --tone: var(--mint); }
+.review--pink { --tone: var(--pink); }
+.review__topic { align-self: flex-start; font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; padding: 6px 10px; border-radius: 999px; background: var(--white); color: var(--ink-2); }
+.review__quote { margin: 0; flex: 1; font-size: clamp(19px, 1.6vw, 22px); font-weight: 500; line-height: 1.35; letter-spacing: -.015em; }
+.review__quote::before { content: '“'; display: block; font-size: 64px; font-weight: 800; line-height: .6; height: 28px; color: var(--orange); }
+.review__who { display: flex; align-items: center; gap: 10px; padding-top: 16px; border-top: 1px solid var(--line-light); }
+.review__who::before { content: ''; width: 12px; height: 12px; border-radius: 50%; background: var(--tone); flex: none; }
+.review__who strong { font-weight: 700; }
 
 /* ---------- How it works (partials/steps.html) ---------- */
 /* Plain on the homepage (it already has colour); coloured cards with big numbers on the pricing page only */
