@@ -62,7 +62,7 @@ export async function messagesPage(env) {
   return new Response(`<!DOCTYPE html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tacto — Messages</title><meta name="robots" content="noindex">
-<link rel="icon" href="/logo.png"><link rel="stylesheet" href="/app.css"></head>
+<link rel="icon" type="image/png" href="/assets/brand/icon-32.png"><link rel="stylesheet" href="/app.css"></head>
 <body>
   <header class="top">
     <img class="top__logo" src="/logo.png" alt="Tacto" width="640" height="200">

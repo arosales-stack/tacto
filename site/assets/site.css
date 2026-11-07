@@ -56,9 +56,10 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
 .h2 { font-size: clamp(42px, 6.4vw, 96px); font-weight: 700; letter-spacing: -.055em; line-height: .92; }
 
 /* ---------- Wordmark ---------- */
-.wordmark { font-size: 24px; font-weight: 800; letter-spacing: -.05em; line-height: 1; display: inline-flex; align-items: center; gap: 6px; }
-.dot { width: 9px; height: 9px; border-radius: 50%; background: currentColor; }
-.wordmark--light { font-size: 26px; color: var(--white); }
+/* Official logo (site/assets/brand): long version in header, footer and comparison; light version on dark */
+.wordmark { display: inline-flex; align-items: center; line-height: 0; }
+.wordmark img { height: 26px; width: auto; }
+.wordmark--light img { height: 24px; }
 
 /* ---------- Buttons ---------- */
 .btn { display: inline-flex; align-items: center; justify-content: space-between; gap: 14px; background: var(--orange); color: var(--white); border: 0; border-radius: 999px; font: inherit; font-weight: 600; line-height: 1.2; white-space: nowrap; cursor: pointer; transition: background .2s; }
@@ -237,7 +238,7 @@ main { display: flex; flex-direction: column; gap: var(--gap); }
   :root { --header-h: 56px; --r-xl: 26px; }
   body { font-size: 16px; }
   .top { padding: 0 6px 0 16px; gap: 8px; }
-  .wordmark { font-size: 22px; }
+  .wordmark img { height: 22px; }
   .lang-switch { padding: 10px 8px; }
   .btn--small { padding: 10px 14px; font-size: 14px; }
   .btn--big { font-size: 16px; padding-left: 22px; }

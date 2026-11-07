@@ -98,7 +98,7 @@ function dataFor(lang, page) {
     ...content,
     t,
     lang,
-    page: { name: page, ...t.pages[page] },
+    page: { name: page, url: content.site.url + urlOf(lang, page), ...t.pages[page] },
     home: urlOf(lang, 'index'),
     switch: { label: strings[other].label, name: strings[other].switch_label, lang: other, href: ONLY_DEFAULT.includes(page) ? urlOf(other, 'index') : urlOf(other, page) },
     alternates: ONLY_DEFAULT.includes(page) ? [] : LANGS.map((l) => ({ lang: l, href: content.site.url + urlOf(l, page) })),

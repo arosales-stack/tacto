@@ -61,6 +61,9 @@ src/                 Worker code (never published as files)
   Quotes come from Audra's own companies (approved by her). Names: first name + last initial.
 - Projects ("Travaux"): `work` in content.json (`shot_mobile` phone capture, optional `shot_desktop` used ≥760px) + `work` texts in the lang files.
   Captures live in `site/assets/work/` as webp, 720px wide. `tone` = yellow | lilac | mint | pink.
+- Brand (`site/assets/brand/`): official logo `tacto-logo.webp` (long, header/footer/comparison), `tacto-logo-light.webp` (on dark),
+  favicons `icon-32.png`, `icon-192.png`, `apple-touch-icon.png`, link-preview image `og-image.png` (short logo on black, 1200×630).
+  Never type the wordmark as text. `public/logo.png` (tools/login) is the same long logo.
 - Styles: only `site/assets/site.css`, tokens in `:root`. No inline styles or inline scripts — the CSP blocks them.
   `site/assets/site.js` has no text either: messages come from `data-*` attributes rendered from the lang files.
 - The hero must fit the first screen on desktop and phones (`.hero` min-height + title size use svh). Check at

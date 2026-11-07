@@ -6,6 +6,21 @@
   <title>{{page.title}}</title>
   <meta name="description" content="{{page.description}}">
   <meta name="theme-color" content="#F3EFE7">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/icon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/icon-192.png">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+  <!-- Link previews (WhatsApp, LinkedIn, iMessage, X…): short logo on black, see site/assets/brand/og-image.png -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tacto">
+  <meta property="og:title" content="{{page.title}}">
+  <meta property="og:description" content="{{page.description}}">
+  <meta property="og:url" content="{{page.url}}">
+  <meta property="og:locale" content="{{t.og_locale}}">
+  <meta property="og:image" content="{{site.url}}/assets/brand/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tacto">
+  <meta name="twitter:card" content="summary_large_image">
   {{#each alternates}}<link rel="alternate" hreflang="{{.lang}}" href="{{.href}}">
   {{/each}}<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
