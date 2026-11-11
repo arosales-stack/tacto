@@ -10,7 +10,7 @@
   "skip": "Aller au contenu",
   "menu": "Menu",
   "close": "Fermer",
-  "home_label": "tacto, accueil",
+  "home_label": "Tacto, accueil",
   "nav_label": "Menu principal",
   "footer_label": "Pied de page",
   "nav": {
@@ -22,15 +22,15 @@
   "contact_link": "Contact",
   "pages": {
     "index": {
-      "title": "tacto — Studio web à Paris : des sites simples, beaux et à vous",
+      "title": "Tacto — Studio web à Paris : des sites simples, beaux et à vous",
       "description": "Studio web à Paris : des sites sur mesure, simples et beaux, que vous modifiez vous-même. Et qui restent à vous."
     },
     "tarifs": {
-      "title": "Tarifs — tacto",
+      "title": "Tarifs — Tacto",
       "description": "450 € la première année, puis 150 € par an. Site sur mesure jusqu'à 5 pages, hébergement, modifications et 40 crédits par an inclus. Le site reste à vous."
     },
     "404": {
-      "title": "Page introuvable — tacto",
+      "title": "Page introuvable — Tacto",
       "description": "Cette page n'existe pas."
     }
   },
@@ -89,7 +89,7 @@
     }
   },
   "compare": {
-    "title": "tacto contre",
+    "title": "Tacto contre",
     "tabs_label": "Comparer avec",
     "badge": "recommandé",
     "yes": "oui",

@@ -9,7 +9,7 @@
   "skip": "Skip to content",
   "menu": "Menu",
   "close": "Close",
-  "home_label": "tacto, home",
+  "home_label": "Tacto, home",
   "nav_label": "Main menu",
   "footer_label": "Footer",
   "nav": {
@@ -21,11 +21,11 @@
   "contact_link": "Contact",
   "pages": {
     "index": {
-      "title": "tacto — Web studio in Paris: simple, beautiful websites that stay yours",
+      "title": "Tacto — Web studio in Paris: simple, beautiful websites that stay yours",
       "description": "Web studio in Paris: custom websites, simple and beautiful, that you edit yourself. And that stay yours."
     },
     "tarifs": {
-      "title": "Pricing — tacto",
+      "title": "Pricing — Tacto",
       "description": "€450 the first year, then €150 per year. Custom website up to 5 pages, hosting, edits and 40 credits a year included. The site stays yours."
     }
   },
@@ -84,7 +84,7 @@
     }
   },
   "compare": {
-    "title": "tacto vs",
+    "title": "Tacto vs",
     "tabs_label": "Compare with",
     "badge": "recommended",
     "yes": "yes",
