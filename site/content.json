@@ -38,7 +38,8 @@
       "name": "Metodas",
       "tone": "yellow",
       "shot_mobile": "/assets/work/metodas-mobile.webp",
-      "shot_desktop": "/assets/work/metodas-desktop.webp"
+      "shot_desktop": "/assets/work/metodas-desktop.webp",
+      "url": "https://metodas.co"
     },
     {
       "id": "tableandco",
@@ -46,7 +47,8 @@
       "name": "Table & Co",
       "tone": "lilac",
       "shot_mobile": "/assets/work/tableandco-mobile.webp",
-      "shot_desktop": "/assets/work/tableandco-desktop.webp"
+      "shot_desktop": "/assets/work/tableandco-desktop.webp",
+      "url": "https://tableandco.co"
     },
     {
       "id": "revo",
@@ -54,7 +56,8 @@
       "name": "Revo",
       "tone": "mint",
       "shot_mobile": "/assets/work/revo-mobile.webp",
-      "shot_desktop": "/assets/work/revo-desktop.webp"
+      "shot_desktop": "/assets/work/revo-desktop.webp",
+      "url": "https://revo-reviews.com"
     }
   ],
   "compare": {

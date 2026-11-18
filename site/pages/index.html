@@ -52,12 +52,14 @@
   <div class="work">
     {{#each work}}
     <article class="project project--{{.tone}}">
-      <div class="project__top"><span class="mono">{{.number}}</span><span class="pill">{{.tag}}</span></div>
-      <div class="project__shot" aria-hidden="true">
-        <div class="project__bar"><i></i><i></i><i></i></div>
-        <picture class="project__img">{{#if .shot_desktop}}<source media="(min-width: 760px)" srcset="{{.shot_desktop}}">{{/if}}<img src="{{.shot_mobile}}" alt="" loading="lazy"></picture>
-      </div>
-      <div class="project__name"><h3>{{.name}}</h3><p>{{.kind}}</p></div>
+      <a class="project__card" href="{{.url}}" target="_blank" rel="noopener">
+        <div class="project__top"><span class="mono">{{.number}}</span><span class="pill">{{.tag}}</span></div>
+        <div class="project__shot" aria-hidden="true">
+          <div class="project__bar"><i></i><i></i><i></i></div>
+          <picture class="project__img">{{#if .shot_desktop}}<source media="(min-width: 760px)" srcset="{{.shot_desktop}}">{{/if}}<img src="{{.shot_mobile}}" alt="" loading="lazy"></picture>
+        </div>
+        <div class="project__name"><h3>{{.name}}</h3><p>{{.kind}}</p><span class="project__visit">{{.visit}} ↗</span></div>
+      </a>
     </article>
     {{/each}}
   </div>

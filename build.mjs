@@ -109,7 +109,7 @@ function dataFor(lang, page) {
       yearly: t.price_format.replace('{n}', content.pricing.yearly),
       credits: content.pricing.credits,
     },
-    work: content.work.map((w) => ({ ...w, ...t.work[w.id] })),
+    work: content.work.map((w) => ({ ...w, ...t.work[w.id], visit: t.home.visit })),
     work_count: String(content.work.length).padStart(2, '0'),
     reviews: content.reviews.map((r) => ({ ...r, ...t.reviews.items[r.id] })),
     compare: {
