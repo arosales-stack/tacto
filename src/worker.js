@@ -73,6 +73,10 @@ async function proxyImageEdit(request, env) {
     },
     body: request.body,
   });
+  // OpenAI's own 401 means our API key was refused. Never pass it on as 401: the tool reads 401 as "not logged in".
+  if (upstream.status === 401) {
+    return json({ error: 'OpenAI refused the API key (OPENAI_API_KEY in Cloudflare): wrong, revoked or expired. Create a new key on platform.openai.com and replace the secret.' }, 424);
+  }
   return new Response(upstream.body, {
     status: upstream.status,
     headers: {

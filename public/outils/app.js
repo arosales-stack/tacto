@@ -83,7 +83,7 @@ async function optimize(item, attempt = 0) {
 
   try {
     const res = await fetch('/api/images/edit', { method: 'POST', body: form });
-    if (res.status === 401) { location.href = '/login'; return; }
+    if (res.status === 401) { location.href = '/login'; return; } // our own session check only (OpenAI errors come back as 424)
     if ((res.status === 429 || res.status >= 500) && attempt < MAX_RETRIES) {
       const wait = Number(res.headers.get('Retry-After')) || 2 ** attempt * 10;
       setState(item, 'busy', `Waiting ${wait}s (OpenAI limit)…`);
